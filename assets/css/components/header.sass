@@ -1,0 +1,245 @@
+#header 
+	display: block
+	position: fixed
+	z-index: 99
+	margin-top: 30px
+
+	+media-sm-and-less
+		position: fixed
+		height: $header-height
+		background: $color-white
+		margin-top: 0
+		border-bottom: solid 1px $color-base-light
+	#logo
+		margin-top: 20px
+		z-index: 2
+
+		+media-sm-and-less
+			margin-top: 25px
+	img 
+		width: 70px
+
+
+
+.menu-principal-container 
+	position: relative
+	text-align: right
+	right: 6.25%
+	margin-right: -18px
+
+	+media-sm-and-less
+
+		position: absolute
+		left: 0
+		height: 70vh
+		padding-bottom: 30vh
+		width: 100%
+		text-align: center
+		transition: all .45s cubic-bezier(.4,0,0,1)
+		transition-delay: 0.1s
+		display: table
+		background: $color-base-light
+		top: 100vh
+	
+		&.active-menu
+			top: $header-height
+	
+	ul 
+		display: inline-block
+		padding: 0
+		margin: auto
+		overflow: hidden
+
+		+media-sm-and-less
+			display: table-cell
+			vertical-align: middle
+
+	li 
+		margin: 10px 10px 0 10px
+		padding: 0
+		float: left
+		text-transform: uppercase
+		letter-spacing: 0.4em
+
+
+
+		+media-sm-and-less
+			display: inline-block
+			width: 100%
+			margin: 10px 0
+
+
+	a 
+		padding: 12px 6px 12px 10px
+		color: $color-dark
+		cursor: pointer
+		font-weight: normal
+		display: block
+		transition: all .45s cubic-bezier(.4,0,0,1)
+		backface-visibility: hidden
+
+		&:hover
+			transform: scale(1.2)
+
+		&:active
+			transform: scale(1.05)
+
+	
+	span 
+		font-family: $montserrat
+		font-weight: 700
+		font-size: 10px
+		padding: 12px 11px 12px 15px
+		color: $color-dark
+		border: 1px solid $color-dark
+		text-decoration: none
+		display: block
+		line-height: 1
+	
+	.current 
+		color: $color-white
+		background: $color-dark
+.menu
+	display: none
+
+
+.mobile-menu
+	overflow: hidden
+	width: 25px
+	height: 27px
+	cursor: pointer
+	position: fixed
+	right: 4.16%
+	z-index: 110
+	margin-top: 40px
+	display: none
+
+	+media-sm-and-less
+		display: block
+
+	span
+		display: block
+		height: 2px
+		margin-top: 8px
+		width: inherit
+		position: relative
+
+.mobile-menu span, .mobile-menu span:after, .mobile-menu span:before
+	background: #000
+	border-radius: 5px
+
+.mobile-menu span:after, .mobile-menu span:before
+	width: inherit
+	content: ""
+	height: inherit
+	position: absolute
+
+.mobile-menu span
+	&:after
+		top: -8px
+
+.mobile-menu span
+	&:before
+		bottom: -8px
+
+.rotate
+	position: fixed
+	z-index: 10
+	top: 0
+	bottom: 0
+	left: 93.75%
+	right: 0
+	text-align: left
+	overflow: hidden
+
+	+media-sm-and-less
+		transition: all .45s cubic-bezier(.4,0,0,1) 0.1s
+		left: 0
+		text-align: center
+		top: 100vh
+		z-index: 99
+		height: 15vh
+	
+		&.active-menu
+			top: 85vh
+
+	a
+		display: block
+		-webkit-font-smoothing: antialiased
+		transition: all .45s cubic-bezier(.4,0,0,1)
+
+		+media-sm-and-less
+			display: inline-block
+
+		&:hover
+			transform: scale(1.2)
+
+		&:active
+			transform: scale(1.05)
+
+	#scroll-down
+		
+	#link--instagram
+		position: absolute
+		background-image: url(assets/img/logo--instagram.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		width: 12px
+		height: 12px
+		right: 50%
+		margin-right: -8px
+		bottom: 8.33%
+		margin-bottom: 35px
+		&:hover
+			transform: scale(1.35)
+
+		+media-sm-and-less
+			position: relative
+			margin: 30px 20px
+			right: auto
+			bottom: auto
+			width: 20px
+			height: 20px
+
+	#link--twitter
+		position: absolute
+		background-image: url(assets/img/logo--twitter.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		width: 12px
+		height: 12px
+		right: 50%
+		margin-right: -8px
+		bottom: 8.33%
+		&:hover
+			transform: scale(1.35)
+
+		+media-sm-and-less
+			position: relative
+			margin: 30px 20px
+			right: auto
+			bottom: auto
+			width: 20px
+			height: 20px
+
+	#link--about
+		position: absolute
+		text-transform: uppercase
+		transform: rotate(-90deg)
+		right: 50%
+		margin-right: -27px
+		bottom: 8.33%
+		margin-bottom: 100px
+
+		a
+			font-size: 12px
+
+		+media-sm-and-less
+			transform: none
+			position: relative
+			right: auto
+			margin-right: auto
+			bottom: auto
+			margin-bottom: auto

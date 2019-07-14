@@ -1,0 +1,59 @@
+.cover-archive
+	height: 30%
+	margin-bottom: ($desktop-margin / 2)
+
+	+media-sm-and-less
+		margin-bottom: $mobile-margin
+		margin-top: $header-height
+
+	&--carnets
+		background: $color-base-light
+		h5
+			color: $color-carnet-dark
+	
+	&--guides
+		background: $color-base-light
+		h5
+			color: $color-guide-dark
+
+	&--conseils
+		background: $color-base-light
+		h5
+			color: $color-conseil-dark
+
+	h5	
+		overflow: hidden
+		font-size: 10vw
+		padding: 1vw 0
+		text-align: center
+		bottom: -6.3vw
+		left: 0
+		right: 0
+		position: absolute
+
+		+media-sm-and-less
+			font-size: 60px
+			padding: 20px 0
+			bottom: -52px
+
+.sous-cat
+
+	&__carnets
+		a
+			&:hover
+				color: $color-carnet-dark
+	&__guides
+		a
+			&:hover
+				color: $color-guide-dark
+	&__conseils
+		a
+			&:hover
+				color: $color-conseil-dark
+
+.archive
+	.grid
+		margin-top: ($desktop-margin / 2)
+
+		+media-sm-and-less
+			margin-top: $mobile-margin

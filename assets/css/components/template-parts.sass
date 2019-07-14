@@ -1,0 +1,147 @@
+#layout
+
+	.deux-tiers__chapter ~ .deux-tiers__paragraph
+
+		&:first-of-type
+			
+			&:first-letter
+				float: left
+				font-weight: 900
+				font-size: 4em
+				margin-top: 7px
+				margin-right: 0.20em
+				line-height: 90%
+
+	p
+		margin-bottom: 30px
+
+.deux-tiers--container
+
+	overflow: hidden
+
+	.deux-tiers
+		clear: both
+		padding-bottom: $desktop-margin
+		float: left
+		+media-md-and-less
+			margin-bottom: 0
+
+		&__chapter
+			padding-bottom: 0
+			margin-bottom: ($desktop-margin / 2)
+
+		&__one-image, &__two-image
+
+			+media-sm-and-less
+				margin-bottom: $desktop-margin
+			
+			img
+				width: 100%
+
+		&__paragraph
+			margin-bottom: -30px
+
+			+media-sm-and-less
+				margin-bottom: $desktop-margin
+
+			h4
+				font-family: $montserrat
+				text-transform: initial
+				letter-spacing: initial
+				font-size: 22px
+				margin-bottom: ($desktop-margin / 2)
+
+		&__aside
+			background: $color-base-light
+			padding-top: $desktop-margin
+			padding-bottom: $desktop-margin
+			margin-bottom: $desktop-margin
+
+			h3
+				margin-bottom: ($desktop-margin / 4)
+
+			p, h3
+				
+				&:nth-last-child(1)
+					margin-bottom: 0 !important
+
+.un-tiers--container
+
+	overflow: hidden
+	position: absolute
+	margin-left: 68.5%
+
+	+media-md-and-less
+		position: relative
+		margin-left: 6.24999999%
+
+	.un-tiers
+		clear: right
+		margin-bottom: $desktop-margin
+
+		&__text
+			padding: 12.5%
+			+media-sm-and-less
+				padding: $desktop-margin
+			
+			.title
+				clear: right
+				display: table
+				margin-bottom: 20px
+
+			img
+				width: 30px
+				float: left
+				margin-right: 15px
+				display: table-cell
+				vertical-align: middle
+
+		p
+			color: $color-light-grey
+
+			a
+				opacity: 1
+			
+			.title-content
+				display: table-cell
+			vertical-align: middle
+
+		&__image
+
+			img
+				width: 100%
+
+.full-width--container
+	font-size: 0
+	overflow: hidden
+	
+	.full-width
+		margin-bottom: ($desktop-margin / 2)
+		float: left
+
+		+media-sm-and-less
+			margin-bottom: 0
+
+		blockquote
+			padding: ($desktop-margin / 2) 0
+
+			&>div
+				overflow: hidden
+
+			+media-md-and-less
+				margin-bottom: $desktop-margin
+		
+	.un-tiers
+		display: inline-block
+		vertical-align: middle
+		float: none
+
+		&__image
+
+			+media-md-and-less
+				margin-bottom: $desktop-margin
+
+			img
+				width: 100%
+
+		

@@ -1,0 +1,117 @@
+.all-destinations
+
+	&--title
+		height: 33.33%
+		background: $color-base-light
+		margin-bottom: ($desktop-margin / 2)
+		z-index: 2
+		h1
+			overflow: hidden
+			font-size: 10vw
+			line-height: 10vw
+			padding: 1vw 0
+			text-align: center
+			bottom: -6.3vw
+			left: 0
+			right: 0
+			position: absolute
+			color: $color-93degres
+			font-family: $leaguegothic-condensed
+
+			+media-sm-and-less
+				font-size: 60px
+				padding: 20px 0
+				bottom: -52px
+
+	.grid
+
+		margin-top: $desktop-margin
+		margin-bottom: $desktop-margin
+		
+		& > div
+			text-align: center
+			overflow: hidden
+			padding-bottom: 33.33%
+			background: $color-dark
+
+			+media-sm-and-less
+				padding-bottom: 66.66%
+				margin-bottom: 6.25%
+
+			&:hover
+				
+				.image
+					transform: scale(1.2)
+				.country-code__01
+					top: -3.75vw
+
+				.country-code__02
+					bottom: -4.25vw
+
+				h4
+					opacity: 1
+				
+
+			&:active
+				.image
+					transform: scale(1.05)
+
+		.image
+			height: 100%
+			position: absolute
+			transition: all 0.45s cubic-bezier(0.4, 0, 0, 1)
+			left: 0
+			top: 0
+			opacity: 0.8
+
+
+
+		h4
+			font-size: 36px
+			width: 100%
+			position: absolute
+			bottom: 45%
+			z-index: 4
+			color: $color-white
+			opacity: 0
+			transition: all 0.45s cubic-bezier(0.4, 0, 0, 1)
+
+			+media-sm-and-less
+				opacity: 1
+
+		h5
+			font-family: $leaguegothic
+			position: absolute
+			z-index: 2
+			width: 100%
+			margin-top: 0
+			transition: all 0.45s cubic-bezier(0.4, 0, 0, 1)
+			font-size: 8vw
+			color: $color-white
+
+			+media-sm-and-less
+				font-size: 20vw
+		
+			
+					
+		a 	
+			text-transform: uppercase
+			font-size: 18px
+			transition: all 0.45s cubic-bezier(0.4, 0, 0, 1)
+			display: block
+			backface-visibility: hidden
+	
+
+
+		.country-code__01
+			top: 38%
+			+media-sm-and-less
+				top: -10vw
+
+		.country-code__02
+			top: auto
+			bottom: 38%
+			+media-sm-and-less
+				bottom: -10vw
+
+	

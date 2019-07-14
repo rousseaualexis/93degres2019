@@ -1,0 +1,41 @@
+#instagram 
+	text-align: center
+	
+	h3 
+		margin-bottom: ($desktop-margin / 2)
+		color: $color-93degres
+		+media-sm-and-less
+			margin-bottom: 30px
+	
+	.cta 
+		border-color: $color-93degres
+		margin-top: ($desktop-margin / 2)
+
+		&:after
+			content: '\270C'
+
+		+media-sm-and-less
+			margin-top: 30px;
+	
+
+.instagram_shots 
+	text-align: center
+	font-size: 0
+	width: 100%
+	overflow: hidden
+	
+	li 
+		float: left
+		width: 25%
+		overflow: hidden
+		cursor: pointer
+
+		+media-sm-and-less
+			margin-bottom: -3px
+			width: 50%
+		
+		img 
+			width: 100%
+			transition: 2s ease
+			transition: all 0.45s cubic-bezier(0.4, 0, 0, 1)
+		
