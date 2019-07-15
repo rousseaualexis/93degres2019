@@ -10,9 +10,14 @@
 		background: $color-white
 		margin-top: 0
 		border-bottom: solid 1px $color-base-light
+
+	div
+		display: inline-block
+		vertical-align: middle
 	#logo
-		margin-top: 20px
+		margin-top:
 		z-index: 2
+		text-align: center
 
 		+media-sm-and-less
 			margin-top: 25px
@@ -21,11 +26,10 @@
 
 
 
-.menu-principal-container 
+.menu-principal-container
+	
 	position: relative
-	text-align: right
-	right: 6.25%
-	margin-right: -18px
+	left: -22px
 
 	+media-sm-and-less
 
@@ -71,7 +75,7 @@
 
 	a 
 		padding: 12px 6px 12px 10px
-		color: $color-dark
+		color: $color-white
 		cursor: pointer
 		font-weight: normal
 		display: block
@@ -142,43 +146,12 @@
 	&:before
 		bottom: -8px
 
-.rotate
-	position: fixed
-	z-index: 10
-	top: 0
-	bottom: 0
-	left: 93.75%
-	right: 0
-	text-align: left
-	overflow: hidden
+#menu-secondary-container
+	text-align: right
 
 	+media-sm-and-less
-		transition: all .45s cubic-bezier(.4,0,0,1) 0.1s
-		left: 0
-		text-align: center
-		top: 100vh
-		z-index: 99
-		height: 15vh
 	
-		&.active-menu
-			top: 85vh
 
-	a
-		display: block
-		-webkit-font-smoothing: antialiased
-		transition: all .45s cubic-bezier(.4,0,0,1)
-
-		+media-sm-and-less
-			display: inline-block
-
-		&:hover
-			transform: scale(1.2)
-
-		&:active
-			transform: scale(1.05)
-
-	#scroll-down
-		
 	#link--instagram
 		position: absolute
 		background-image: url(assets/img/logo--instagram.svg)
@@ -201,45 +174,3 @@
 			bottom: auto
 			width: 20px
 			height: 20px
-
-	#link--twitter
-		position: absolute
-		background-image: url(assets/img/logo--twitter.svg)
-		background-size: contain
-		background-repeat: no-repeat
-		background-position: center
-		width: 12px
-		height: 12px
-		right: 50%
-		margin-right: -8px
-		bottom: 8.33%
-		&:hover
-			transform: scale(1.35)
-
-		+media-sm-and-less
-			position: relative
-			margin: 30px 20px
-			right: auto
-			bottom: auto
-			width: 20px
-			height: 20px
-
-	#link--about
-		position: absolute
-		text-transform: uppercase
-		transform: rotate(-90deg)
-		right: 50%
-		margin-right: -27px
-		bottom: 8.33%
-		margin-bottom: 100px
-
-		a
-			font-size: 12px
-
-		+media-sm-and-less
-			transform: none
-			position: relative
-			right: auto
-			margin-right: auto
-			bottom: auto
-			margin-bottom: auto
