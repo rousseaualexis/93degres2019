@@ -1,3 +1,33 @@
+#homepage--cover
+
+	.categories
+		float: left
+		clear: both
+
+
+	.cta--circle
+		width: 50%
+		padding 10px
+		float: left
+		clear: both
+		display: table-cell
+
+
+		a
+			display: inline-block
+			border-radius: 100%
+			background: $color-black
+			min-width: 10px
+			padding: 40px
+			
+			div
+				color: $color-white
+				position: relative
+				height: 0
+				padding: 50% 0
+				top: -10px; /* Half of font-size, in our case it is (14px / 2) */
+
+
 #home-posts
 	+media-sm-and-less
 		margin-top: $header-height
@@ -9,11 +39,8 @@
 
 	&.post 
 		&--article
-
-
 			h1
-			
-
+		
 				& > div
 
 					&:nth-child(2)
