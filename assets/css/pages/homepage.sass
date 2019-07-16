@@ -3,11 +3,40 @@
 	.categories
 		float: left
 		clear: both
+		margin-bottom: $desktop-margin/2
 
 
 	.cta--circle
 		float: left
 		clear: both
+
+
+	.h1
+
+		margin-bottom: $desktop-margin*1.5
+		
+		div
+
+			&:nth-child(2)
+				margin-left: (2 / $grid-columns * 100%)
+				+media-sm-and-less
+					margin-left: 0
+					left: ($desktop-margin * 2)
+			    
+			&:nth-child(3)
+
+				margin-left: (1 / $grid-columns * 100%)
+				+media-sm-and-less
+					margin-left: 0
+					left: $desktop-margin
+
+		strong
+
+			color: $color-93degres
+			font-familly: $dm_sans
+
+
+				
 
 
 #home-posts
@@ -17,30 +46,7 @@
 	& > div 
 	
 
-.first-post 
-
-	&.post 
-		&--article
-			h1
-		
-				& > div
-
-					&:nth-child(2)
-	
-					    
-					&:nth-child(3)
-	
-						margin-left: ($desktop-margin * 2)
-						+media-sm-and-less
-							margin-left: 0
-							left: ($desktop-margin * 2)
-
-					&:nth-child(4)
-						
-						margin-left: $desktop-margin
-						+media-sm-and-less
-							margin-left: 0
-							left: $desktop-margin
+			
 						
 	
 	

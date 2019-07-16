@@ -72,6 +72,8 @@ var tools = (function() {
 })();
 var site = (function() { 
 
+
+
     /*  =============================================================================
         PRELOADER
     ============================================================================== */
@@ -259,13 +261,16 @@ var homepage = (function() {
         }
     }
 
+
     var firstPost = function(){
         var $el = $('.first-post'),
-            $text = $("#title h1"),
+            $text = $("#homepage--cover .h1"),
             $categories = $el.find('.categories div'),
-            split = new SplitText($text,{charsClass: "charsplit", wordsClass: "wordsplit"}),
-            splitCategories = new SplitText($categories,{charsClass: "charsplit", wordsClass: "wordsplit"});
-            $("h1").prepend('<div class="trait"></div>');
+
+ 
+
+            split = new SplitText($text, {type:"words"}),
+            splitCategories = new SplitText($categories,{charsClass: "charsplit", wordsClass: "wordsplit", position:"absolute"});
         var tl = new TimelineLite();
 
             tl.staggerFrom($el.find('.country-code h5'), 1.8, { alpha:'0', ease: Power4.easeOut}, 0.2, '+=0.8');
