@@ -93,9 +93,11 @@ a .cta:after{content:'\01F449';font-size:20px;margin-top:-4px;margin-left:-10px;
 a .cta:hover{-webkit-transform:scale(1.2);transform:scale(1.2);padding-right:40px}
 a .cta:hover:after{margin-left:5px;opacity:1;position:absolute}
 a .cta:active{-webkit-transform:scale(1.05);transform:scale(1.05)}
-.categories{cursor:pointer;text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-size:100% 0;background-repeat:no-repeat;background-image:linear-gradient(45deg,#ffbc00,#ffbc00);background-position:25px 50%;padding:10px 10px 8px 50px;overflow:hidden}
-.categories img{width:35px;position:absolute;margin-top:-6px;left:0}
-.categories:hover{cursor:pointer;background-size:100% 100%;color:#fff !important}
+.cta--circle{display:table-cell}
+.cta--circle a{font-size:12px;display:inline-block;border-radius:100%;background:#000;min-width:10px;padding:40px;text-transform:uppercase;letter-spacing:.05em}
+.cta--circle a div{color:#fff;position:relative;height:0;padding:50% 0;top:-6px}
+.categories{cursor:pointer;text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:10px 10px 8px 50px;overflow:hidden;color:#fff}
+.categories img{width:27px;position:absolute;margin-top:-6px;left:0}
 p{font-family:"dm_sans",sans-serif;font-weight:400;font-size:17px;line-height:32px;color:#202227}
 p strong{font-weight:600}
 p a{font-family:inherit;text-decoration:none;font-weight:inherit;font-size:inherit;font-weight:bolder;letter-spacing:initial;color:inherit;background-size:100% 2px;background-repeat:no-repeat;background-image:linear-gradient(45deg,#ffbc00,#ffbc00);background-position:center bottom;cursor:pointer;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1)}
@@ -241,9 +243,7 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 .comment-form textarea{resize:none;width:100%;font-size:13px;padding:15px 0 15px 15px;border:1px solid rgba(0,0,0,0.05);margin-top:25px;font-family:helvetica,arial,sans-serif}
 .form-submit input{font-family:"dm_sans",sans-serif;font-size:16px;border:0;text-transform:uppercase;letter-spacing:.4em;color:#f7f6f2;background:#202227;cursor:pointer}
 #homepage--cover .categories{float:left;clear:both}
-#homepage--cover .cta--circle{width:50%;float:left;clear:both;display:table-cell}
-#homepage--cover .cta--circle a{display:inline-block;border-radius:100%;background:#000;min-width:10px;padding:40px}
-#homepage--cover .cta--circle a div{color:#fff;position:relative;height:0;padding:50% 0;top:-10px}
+#homepage--cover .cta--circle{float:left;clear:both}
 .first-post.post--article h1>div:nth-child(3){margin-left:16.66%}
 .first-post.post--article h1>div:nth-child(4){margin-left:8.33%}
 @media(min-width:768px){.container{max-width:100%}

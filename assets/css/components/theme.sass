@@ -92,32 +92,41 @@ a
 				position: absolute
 		&:active
 			transform: scale(1.05)
-		
+
+.cta--circle
+		display: table-cell
+
+
+		a
+			font-size: 12px
+			display: inline-block
+			border-radius: 100%
+			background: $color-black
+			min-width: 10px
+			padding: 40px
+			text-transform: uppercase
+			letter-spacing: 0.05em
+			
+			div
+				color: $color-white
+				position: relative
+				height: 0
+				padding: 50% 0
+				top: -6px; /* Half of font-size, in our case it is (14px / 2) */	
 	
 .categories
 	cursor: pointer
 	text-transform: uppercase
 	user-select: none
-	background-size: 100% 0
-	background-repeat: no-repeat
-	background-image: linear-gradient(45deg, $color-93degres, $color-93degres )
-	background-position: 25px 50%
 	padding: 10px 10px 8px 50px
 	overflow: hidden
-	//left: -12px
-	//transition: all 0.2s ease 0s
+	color: $color-white
 
 	img 
-		width: 35px
+		width: 27px
 		position: absolute
 		margin-top: -6px
 		left: 0px
-	
-	&:hover
-		cursor: pointer
-		//left: 0
-		background-size: 100% 100%
-		color: $color-white !important
 
 
 p 
