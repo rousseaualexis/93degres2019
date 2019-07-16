@@ -25,8 +25,7 @@
 		width: 70px
 
 
-
-.menu-principal-container
+.menu-principal-container, .menu-secondary-container
 	
 	position: relative
 	left: -22px
@@ -59,11 +58,10 @@
 			vertical-align: middle
 
 	li 
-		margin: 10px 10px 0 10px
+		margin: 0px 10px 0 10px
 		padding: 0
-		float: left
-		text-transform: uppercase
-		letter-spacing: 0.4em
+		display: inline-block
+		vertical-align: middle
 
 
 
@@ -74,7 +72,7 @@
 
 
 	a 
-		padding: 12px 6px 12px 10px
+		padding: 12px 10px 12px 10px
 		color: $color-white
 		cursor: pointer
 		font-weight: normal
@@ -83,28 +81,33 @@
 		backface-visibility: hidden
 
 		&:hover
-			transform: scale(1.2)
+			text-decoration: underline
 
-		&:active
-			transform: scale(1.05)
 
-	
-	span 
-		font-family: $sans_serif
-		font-weight: 700
-		font-size: 10px
-		padding: 12px 11px 12px 15px
-		color: $color-dark
-		border: 1px solid $color-dark
-		text-decoration: none
-		display: block
-		line-height: 1
+
+	#link--instagram
+		background-image: url(assets/img/logo--instagram.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		width: 20px
+		height: 20px
+
+		+media-sm-and-less
+			position: relative
+			margin: 30px 20px
+			right: auto
+			bottom: auto
+			width: 20px
+			height: 20px
 	
 	.current 
 		color: $color-white
 		background: $color-dark
-.menu
-	display: none
+
+.menu-secondary-container
+	text-align: right
+
 
 
 .mobile-menu
@@ -146,31 +149,6 @@
 	&:before
 		bottom: -8px
 
-#menu-secondary-container
-	text-align: right
 
-	+media-sm-and-less
+
 	
-
-	#link--instagram
-		position: absolute
-		background-image: url(assets/img/logo--instagram.svg)
-		background-size: contain
-		background-repeat: no-repeat
-		background-position: center
-		width: 12px
-		height: 12px
-		right: 50%
-		margin-right: -8px
-		bottom: 8.33%
-		margin-bottom: 35px
-		&:hover
-			transform: scale(1.35)
-
-		+media-sm-and-less
-			position: relative
-			margin: 30px 20px
-			right: auto
-			bottom: auto
-			width: 20px
-			height: 20px

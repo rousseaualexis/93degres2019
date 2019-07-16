@@ -149,7 +149,7 @@ var site = (function() {
     ============================================================================== */
 
   var allModules = function() {
-        navItem();
+
         randomize();
         scrollReveal();
     }
@@ -160,15 +160,7 @@ var site = (function() {
         MODULES
     ============================================================================== */
 
-    
-    var navItem = function(){
-
-        var $el = $('#header'),
-            $text = $('.menu a'),
-            split = new SplitText($text,{charsClass: 'charsplit', wordsClass: 'wordsplit'}),
-            tl = new TimelineLite();
-            tl.staggerFrom($el.find('.wordsplit'), 1.2, {y:'400%', ease:Power4.easeOut}, 0.03, 1);
-        }
+  
 
     var randomize = function(){
         var tl = new TimelineLite();

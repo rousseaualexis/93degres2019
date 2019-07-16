@@ -86,7 +86,7 @@ body{background-color:#202227}
 .h4{font-family:"dm_sans",sans-serif;font-size:14px;text-transform:uppercase;line-height:28px;letter-spacing:.2em;color:#202227}
 .h5{font-family:"dm_sans",sans-serif;font-size:49vw;text-transform:uppercase;color:#202227;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 em{font-style:italic}
-a{font-family:"dm_sans",sans-serif;text-decoration:none;color:inherit;letter-spacing:.2em;font-size:14px}
+a{font-family:"dm_sans",sans-serif;text-decoration:none;color:inherit;font-size:20px;letter-spacing:-0.02em}
 a p{letter-spacing:initial}
 a .cta{text-transform:uppercase;display:inline-block;position:relative;border:solid 2px;border-radius:100px;padding:15px 23px 15px 25px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 a .cta:after{content:'\01F449';font-size:20px;margin-top:-4px;margin-left:-10px;opacity:0;position:absolute;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1)}
@@ -132,24 +132,20 @@ li{display:inline-block}
 #header div{display:inline-block;vertical-align:middle}
 #header #logo{z-index:2;text-align:center}
 #header img{width:70px}
-.menu-principal-container{position:relative;left:-22px}
-.menu-principal-container ul{display:inline-block;padding:0;margin:auto;overflow:hidden}
-.menu-principal-container li{margin:10px 10px 0 10px;padding:0;float:left;text-transform:uppercase;letter-spacing:.4em}
-.menu-principal-container a{padding:12px 6px 12px 10px;color:#fff;cursor:pointer;font-weight:normal;display:block;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.menu-principal-container a:hover{-webkit-transform:scale(1.2);transform:scale(1.2)}
-.menu-principal-container a:active{-webkit-transform:scale(1.05);transform:scale(1.05)}
-.menu-principal-container span{font-family:helvetica,arial,sans-serif;font-weight:700;font-size:10px;padding:12px 11px 12px 15px;color:#202227;border:1px solid #202227;text-decoration:none;display:block;line-height:1}
-.menu-principal-container .current{color:#fff;background:#202227}
-.menu{display:none}
+.menu-principal-container,.menu-secondary-container{position:relative;left:-22px}
+.menu-principal-container ul,.menu-secondary-container ul{display:inline-block;padding:0;margin:auto;overflow:hidden}
+.menu-principal-container li,.menu-secondary-container li{margin:0 10px 0 10px;padding:0;display:inline-block;vertical-align:middle}
+.menu-principal-container a,.menu-secondary-container a{padding:12px 10px 12px 10px;color:#fff;cursor:pointer;font-weight:normal;display:block;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.menu-principal-container a:hover,.menu-secondary-container a:hover{text-decoration:underline}
+.menu-principal-container #link--instagram,.menu-secondary-container #link--instagram{background-image:url(assets/img/logo--instagram.svg);background-size:contain;background-repeat:no-repeat;background-position:center;width:20px;height:20px}
+.menu-principal-container .current,.menu-secondary-container .current{color:#fff;background:#202227}
+.menu-secondary-container{text-align:right}
 .mobile-menu{overflow:hidden;width:25px;height:27px;cursor:pointer;position:fixed;right:4.16%;z-index:110;margin-top:40px;display:none}
 .mobile-menu span{display:block;height:2px;margin-top:8px;width:inherit;position:relative}
 .mobile-menu span,.mobile-menu span:after,.mobile-menu span:before{background:#000;border-radius:5px}
 .mobile-menu span:after,.mobile-menu span:before{width:inherit;content:"";height:inherit;position:absolute}
 .mobile-menu span:after{top:-8px}
 .mobile-menu span:before{bottom:-8px}
-#menu-secondary-container{text-align:right}
-#menu-secondary-container #link--instagram{position:absolute;background-image:url(assets/img/logo--instagram.svg);background-size:contain;background-repeat:no-repeat;background-position:center;width:12px;height:12px;right:50%;margin-right:-8px;bottom:8.33%;margin-bottom:35px}
-#menu-secondary-container #link--instagram:hover{-webkit-transform:scale(1.35);transform:scale(1.35)}
 #footer{background:#f7f6f2;padding-top:8.33%;padding-bottom:4.165%}
 #footer p{text-align:center;margin-top:4.165%}
 #instagram{text-align:center}
@@ -426,12 +422,12 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 .sous-cat{padding-top:0;padding-bottom:0}
 #header{position:fixed;height:100px;background:#fff;margin-top:0;border-bottom:solid 1px #f7f6f2}
 #header #logo{margin-top:25px}
-.menu-principal-container{position:absolute;left:0;height:70vh;padding-bottom:30vh;width:100%;text-align:center;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-transition-delay:.1s;transition-delay:.1s;display:table;background:#f7f6f2;top:100vh}
-.menu-principal-container.active-menu{top:100px}
-.menu-principal-container ul{display:table-cell;vertical-align:middle}
-.menu-principal-container li{display:inline-block;width:100%;margin:10px 0}
+.menu-principal-container,.menu-secondary-container{position:absolute;left:0;height:70vh;padding-bottom:30vh;width:100%;text-align:center;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-transition-delay:.1s;transition-delay:.1s;display:table;background:#f7f6f2;top:100vh}
+.menu-principal-container.active-menu,.menu-secondary-container.active-menu{top:100px}
+.menu-principal-container ul,.menu-secondary-container ul{display:table-cell;vertical-align:middle}
+.menu-principal-container li,.menu-secondary-container li{display:inline-block;width:100%;margin:10px 0}
+.menu-principal-container #link--instagram,.menu-secondary-container #link--instagram{position:relative;margin:30px 20px;right:auto;bottom:auto;width:20px;height:20px}
 .mobile-menu{display:block}
-#menu-secondary-container #link--instagram{position:relative;margin:30px 20px;right:auto;bottom:auto;width:20px;height:20px}
 #instagram h3{margin-bottom:30px}
 #instagram .cta{margin-top:30px}
 .instagram_shots li{margin-bottom:-3px;width:50%}

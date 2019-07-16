@@ -18,9 +18,11 @@
         <div id="logo" class="col-xs-2">
             <a href="<?php echo get_bloginfo( 'wpurl' );?>"><img src="<?php bloginfo('template_url') ?>/assets/img/logo_2.svg" alt="93degres"/></a>
         </div>
-        <div id="menu-secondary-container" class="col-xs-5">
-            <div id="link--about"><a href="<?php echo get_bloginfo( 'wpurl' );?>/a-propos">À propos</a></div>
-            <div id="link--instagram"><a href="https://www.instagram.com/93.degres/" target="_blank"></a></div>
+        <div class="menu-secondary-container col-xs-5">
+            <ul>
+                <li><a href="<?php echo get_bloginfo( 'wpurl' );?>/a-propos">À propos</a></li>
+                <li ><a id="link--instagram" href="https://www.instagram.com/93.degres/" target="_blank"></a></li>
+            </ul>
         </div>
         <div id="mobile-menu" class="mobile-menu">
             <span></span>
