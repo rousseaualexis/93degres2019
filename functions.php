@@ -7,25 +7,18 @@ function startwordpress_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'startwordpress_scripts' );
 
-// ENQUEUE GOOGLE FONTS
-function startwordpress_google_fonts() {
-                wp_register_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900');
-                wp_enqueue_style( 'Montserrat');
-        }
-
-add_action('wp_print_styles', 'startwordpress_google_fonts');
-
 
 // Support Global name of the Website
 add_theme_support( 'title-tag' );
 
 
 // REMOVE BASE TEXTE EDITOR
+/*
 function remove_pages_editor(){
     remove_post_type_support( 'post', 'editor' );
 }   
 add_action( 'init', 'remove_pages_editor' );
-
+*/
 
 // FUNCTIONS TO REMOVE BASE POST FROM THE ADMIN
 function remove_menus(){
@@ -34,10 +27,11 @@ function remove_menus(){
 add_action( 'admin_menu', 'remove_menus' );
 
 add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
-
+/*
 function remove_default_post_type_menu_bar( $wp_admin_bar ) {
     $wp_admin_bar->remove_node( 'new-post' );
 }
+*/
 
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 
@@ -47,6 +41,8 @@ function remove_draft_widget(){
 
 
 // ADD CUSTOM POST TYPES
+
+
 
 
 add_action('init', 'my_custom_init');
@@ -69,9 +65,10 @@ register_post_type(
       'not_found_in_trash'=> 'Pas de Article dans la corbeille'
       ),
     'public' => true,
+    'show_in_rest' => true, // Important !
     'capability_type' => 'post',
     'supports' => array(
-      'title', 'comments'
+      'title', 'comments', 'editor'
     ),
     'has_archive' => true,
       'taxonomies' => array('category'),
@@ -144,6 +141,7 @@ register_post_type(
 
 
 
+
 /* Show Custom post Types on categorie page */
 function custom_post_type_cat_filter($query) {
   if ( !is_admin() && $query->is_main_query() ) {
@@ -174,6 +172,48 @@ function tiny_mce_remove_unused_formats($init) {
 }
 
 
+/*
+ * -----------------------------------------------------------------------------
+ * Advanced Custom Fields Modifications of the height of tge WYSIWIG
+ * -----------------------------------------------------------------------------
+*/
+function PREFIX_apply_acf_modifications() {
+?>
+  <style>
+    .acf-editor-wrap iframe {
+      min-height: 0;
+    }
+  </style>
+  <script>
+    (function($) {
+      // (filter called before the tinyMCE instance is created)
+      acf.add_filter('wysiwyg_tinymce_settings', function(mceInit, id, $field) {
+        // enable autoresizing of the WYSIWYG editor
+        mceInit.wp_autoresize_on = true;
+        return mceInit;
+      });
+      // (action called when a WYSIWYG tinymce element has been initialized)
+      acf.add_action('wysiwyg_tinymce_init', function(ed, id, mceInit, $field) {
+        // reduce tinymce's min-height settings
+        ed.settings.autoresize_min_height = 0;
+        // reduce iframe's 'height' style to match tinymce settings
+        $('.acf-editor-wrap iframe').css('height', '0');
+      });
+    })(jQuery)
+  </script>
+<?php
+}
+/*
+ * -----------------------------------------------------------------------------
+ * WordPress hooks
+ * -----------------------------------------------------------------------------
+*/
+add_action('acf/input/admin_footer', 'PREFIX_apply_acf_modifications');
+
+
+
+
+
 // ADD STYLE TO TINY MCE
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
 function my_toolbars( $toolbars )
@@ -192,6 +232,8 @@ function my_toolbars( $toolbars )
     $toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'underline', 'link' );
     $toolbars['Chapter' ] = array();
     $toolbars['Chapter' ][1] = array('bold' , 'italic' , 'underline', 'bloc');
+    $toolbars['Title' ] = array();
+    $toolbars['Title' ][1] = array('bold');
     $toolbars['Code'][2] = array('code');
 
     // Edit the "Full" toolbar and remove 'code'

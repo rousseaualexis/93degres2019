@@ -80,7 +80,7 @@ table{border-collapse:collapse;border-spacing:0}
 *::selection{background-color:rgba(0,0,0,0.05)}
 body{background-color:#202227}
 .h1{font-family:"gt_sectra",serif;color:#fff;font-size:100px;line-height:100px;text-transform:uppercase}
-.h1 span{font-family:"dm_sans",sans-serif;font-weight:700}
+.h1 strong{font-family:"dm_sans",sans-serif;font-weight:700}
 .h2,blockquote{font-family:"dm_sans",sans-serif;font-size:23;font-family:"dm_sans",sans-serif;font-size:45px;line-height:52px;color:#202227}
 .h2 em,blockquote em{font-style:normal}
 .h4{font-family:"dm_sans",sans-serif;font-size:14px;text-transform:uppercase;line-height:28px;letter-spacing:.2em;color:#202227}
@@ -129,7 +129,6 @@ li{display:inline-block}
 .list-sous-cat .list-sous-cat-element{display:inline-block;margin:12px 20px}
 .mask{position:fixed;background:#ffbc00;z-index:200;top:0;bottom:0;left:0;right:0}
 #header{display:block;position:relative;z-index:99;height:100px}
-#header div{display:inline-block;vertical-align:middle}
 #header #logo{z-index:2;text-align:center}
 #header img{width:70px}
 .menu-principal-container,.menu-secondary-container{position:relative;left:-22px}
