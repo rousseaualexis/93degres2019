@@ -119,7 +119,7 @@ var site = (function() {
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.02,
+                    ease: 0.1,
                     // the maximum value to translate the image is set in a CSS variable (--overflow)
                     maxValue: parseInt(getComputedStyle(this.DOM.image).getPropertyValue('--overflow'), 10),
                     // current value setter
@@ -206,7 +206,7 @@ var site = (function() {
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.12,
+                    ease: 0.1,
                     // current value setter
                     // in this case the value of the translation will be the same like the document scroll
                     setValue: () => docScroll
@@ -382,7 +382,6 @@ var site = (function() {
 
   var allModules = function() {
 
-        randomize();
         scrollReveal();
     }
 
@@ -393,19 +392,6 @@ var site = (function() {
     ============================================================================== */
 
   
-
-    var randomize = function(){
-        var tl = new TimelineLite();
-        $( '.randomize' ).each(function() {
-            var minRotate = -45,
-            maxRotate = 45,
-            randomX = Math.floor( Math.random() * 100 ) + "%",
-            randomY = Math.floor( Math.random() * 100 ) + "%",
-            degree = Math.floor(Math.random()*( maxRotate - minRotate + 1 ) + minRotate);
-            tl.to($(this), 0.1, {rotation:degree, y:randomY, x:randomX, ease:Power2.easeOut}, 0.1);
-        })
-    }
-
     var scrollReveal = function() {
         //get viewport size
         var windowHeight = $(window).innerHeight(),
@@ -492,28 +478,7 @@ var homepage = (function() {
     }
 
 
-    var firstPost = function(){
-        var $el = $('.first-post'),
-            $text = $("#homepage--cover h1"),
-            $categories = $el.find('.categories div'),
 
- 
-
-            split = new SplitText($text, {type:"words"}),
-            splitCategories = new SplitText($categories,{charsClass: "charsplit", wordsClass: "wordsplit", position:"absolute"});
-        var tl = new TimelineLite();
-
-
-            tl.staggerFrom($el.find('.country-code h5'), 1.8, { alpha:'0', ease: Power4.easeOut}, 0.2, '+=0.8');
-            tl.from($el.find('.first-post-image .image'), 1.8, {y:'200%', ease:Power4.easeOut}, '-=1.6');
-            tl.from($el.find('.categories img'), 0.6, {y:'300%', ease:Power2.easeOut}, '-=1.2');
-            tl.staggerFrom($el.find('.categories .wordsplit'), 0.6, {y:'300%', ease:Power2.easeOut}, 0.1, '-=1.1');
-            tl.staggerFrom($el.find('h1 .charsplit'), 1.2, {y:'150%', ease:Power4.easeOut}, 0.01, '-=1');
-            tl.from($el.find('strong'), 0.8, {left:'-120%', ease:Power4.easeOut}, '-=0.8');
-            tl.from($el.find('.a-cta'), 1, {opacity:0, y:'300', ease:Power4.easeOut}, '-=1');
-            tl.from($el.find('.trait'), 1.2, {scaleX:'0', transformOrigin:"left", ease:Power4.easeOut}, '-=1');
-            tl.from($el.find('.label'), 0.8, {alpha:'0', scale:'1.4', ease:Power4.easeOut}, '-=0.6');
-    }
 
     return {
             init: init

@@ -9,7 +9,7 @@ Template Name: Homepage
 <div data-scroll>
 <?php get_header(); ?>
 <div class="container">
-    <div id="homepage--cover" class="row">
+    <div id="homepage--cover" class="content row">
         <?php
             $args = array(
                 'post_type' => array('articles'),
@@ -48,8 +48,8 @@ Template Name: Homepage
                                     </a>
                                 </div>
 
-                                <div id="homepage--cover--image" class="col-xs-9">
-                                    <div class="item__img-wrap" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+                                <div id="homepage--cover--image" class="item col-xs-9">
+                                    <div class="item__img-wrap">
                                     <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                                     </div></div>
                                 </div>
@@ -60,7 +60,7 @@ Template Name: Homepage
                         <div class="grid scroll-reveal col-md-46 col-md-pull-1">
         <?php
                             else :
-                              
+                                get_template_part( 'assets/views/homepage--content-grid' );
                             endif;
                 endwhile;
             endif;
@@ -69,23 +69,5 @@ Template Name: Homepage
     </div>
 </div>
 
-<div class="bootstrap--grid container">
-    <div class="row">
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-    <div class="col-xs-1"><div></div></div>
-</div>
-</div>
 <?php get_footer(); ?>
 <?php include'end.php'; ?>

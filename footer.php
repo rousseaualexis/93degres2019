@@ -5,6 +5,24 @@
     <p class="col-xs-48"> ©93.Degrés – by Alexis & Agathe</p>
 </div>
 </main>
+<div class="bootstrap--grid container">
+    <div class="row">
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+</div>
+</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/jquery.nicescroll.min.js"></script>
