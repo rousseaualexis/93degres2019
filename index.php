@@ -5,6 +5,8 @@ Template Name: Homepage
 ?>
 <?php include'head.php'; ?>
 <body class="homepage">
+    <main>
+<div data-scroll>
 <?php get_header(); ?>
 <div class="container">
     <div id="homepage--cover" class="row">
@@ -33,17 +35,26 @@ Template Name: Homepage
                                     }
                                 ?>
                                 
-                                <span class="h1 col-xs-10 col-xs-offset-1"><?php the_title(); ?></span>
+                                <div class="h1 col-xs-10 col-xs-offset-1" data-lining><?php the_title(); ?></div>
+                                <?php 
+                                    $thumbnail = get_field( 'thumbnail' );
+                                    $thumbnail_url = $thumbnail['sizes']['large'];
+                                ?>
+                              
+                                
                                 <a class="categories col-xs-offset-1" href="<?php echo $term_url; ?>"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_date('d.m.Y'); ?></span></a>
                                 <div class="cta--circle col-xs-offset-1">
                                     <a class="" href="<?php the_permalink(); ?>"><div>Découvrir</div>
                                     </a>
                                 </div>
-                              
-                            <div class="first-post-image col-xs-31 col-xs-offset-0 col-md-offset-23">
-                                <div class="image" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+
+                                <div id="homepage--cover--image" class="col-xs-9">
+                                    <div class="item__img-wrap" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+                                    <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+                                    </div></div>
                                 </div>
-                            </div>
+
+
 
                 
                         <div class="grid scroll-reveal col-md-46 col-md-pull-1">
@@ -56,6 +67,25 @@ Template Name: Homepage
         ?>
                         </div>
     </div>
+</div>
+
+<div class="bootstrap--grid container">
+    <div class="row">
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+    <div class="col-xs-1"><div></div></div>
+</div>
 </div>
 <?php get_footer(); ?>
 <?php include'end.php'; ?>

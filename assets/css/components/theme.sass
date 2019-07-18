@@ -1,3 +1,5 @@
+
+
 *
 	&::selection
     	background-color: rgba(0,0,0,0.05)
@@ -177,15 +179,10 @@ li
 
 .container
 	margin-bottom: $desktop-margin
-	padding-left: 5px
-	padding-right: 5px
 
 	+media-sm-and-less
 		margin-bottom: 60px
 
-.row
-	margin-right: -5px
-	margin-left: -5px
 .table 
 	display: table
 	width: 100%
@@ -204,9 +201,29 @@ li
 	overflow: hidden
 
 .image 
-	width: 100%
 	background-size: cover
 	background-position: center
+
+.item__img-wrap
+	--aspect-ratio: 21/9
+	overflow: hidden
+	max-width: 100%
+	padding-bottom: calc(100% / (var(--aspect-ratio)))
+	will-change: transform
+
+.item:first-child .item__img-wrap
+	--aspect-ratio: 8/10
+
+.item__img
+
+	--overflow: 100px
+	height: calc(100% + (2 * var(--overflow)))
+	top: calc( -1 * var(--overflow))
+	width: 100%
+	position: absolute
+	background-size: cover
+	background-position: 50% 0%
+	will-change: transform
 
 .cover-gradient 
 	top: 0
@@ -232,6 +249,9 @@ li
 
 .image--16-9 
 	padding-bottom: 56.25%
+
+.image--21-9 
+	padding-bottom: 42.85%
 
 .image--1-2 
 	padding-bottom: 50%

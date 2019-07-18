@@ -4,37 +4,52 @@
 		float: left
 		clear: both
 		margin-bottom: $desktop-margin/2
+		position: relative
+		padding-left: 5px
 
 
 	.cta--circle
 		float: left
 		clear: both
+		position: relative
+		padding-left: 5px
 
 
 	.h1
 
+
 		margin-bottom: $desktop-margin*1.5
+
+
 		
-		div
-
-			&:nth-child(2)
-				margin-left: (2 / $grid-columns * 100%)
-				+media-sm-and-less
-					margin-left: 0
-					left: ($desktop-margin * 2)
+		[index="2"]
+			margin-left: (2 / $grid-columns * 100%)
+			+media-sm-and-less
+				margin-left: 0
+				left: ($desktop-margin * 2)
 			    
-			&:nth-child(3)
-
-				margin-left: (1 / $grid-columns * 100%)
-				+media-sm-and-less
-					margin-left: 0
-					left: $desktop-margin
+		[index="3"]
+			margin-left: (1 / $grid-columns * 100%)
+			+media-sm-and-less
+				margin-left: 0
+				left: $desktop-margin
 
 		strong
 
 			color: $color-93degres
-			font-familly: $dm_sans
 
+	&--image
+
+		float: right
+
+		z-index: -1
+		padding-right: 0
+		margin-top: $desktop-margin* -1
+
+		.image
+
+
+			position: relative
 
 				
 
