@@ -437,7 +437,6 @@ var site = (function() {
 var homepage = (function() {
     
     var init = function() {
-        firstPost();
         $('body').on('reveal', '.scroll-reveal', scrollRevealHandler);
     }
 

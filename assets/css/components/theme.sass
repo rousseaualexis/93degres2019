@@ -19,30 +19,46 @@ body
 	strong
 		font-family: $dm_sans
 		font-weight: 700
+		letter-spacing: -0.02em
+		color: $color-93degres
 
 // 		span
 //		font-size: 24px
 //		text-transform: none
 //		line-height: initial
 
-.h2, blockquote 
-	font-family: $dm_sans
-	font-size: 23
-	font-family: $dm_sans 
-	font-size: 45px
-	line-height: 52px
-	color: $color-dark
+.h2
+	font-family: $gt_sectra
+	color: $color-white
+	font-size: 52px
+	line-height: 76px
 
-	em
-		font-style: normal
+	strong
+		font-family: $dm_sans
+		font-weight: 700
+		letter-spacing: -0.02em
+		color: $color-93degres
+
+.h3
+
+	font-family: $gt_sectra
+	color: $color-white
+	font-size: 38px
+	line-height: 48px
+
+	strong
+		font-family: $dm_sans
+		font-weight: 700
+		letter-spacing: -0.02em
+		color: $color-93degres
+
 
 .h4
 	font-family: $dm_sans 
-	font-size: 14px
-	text-transform: uppercase
-	line-height: 28px
-	letter-spacing: 0.2em
-	color: $color-dark
+	font-size: 22px
+	line-height: 24px
+	letter-spacing: -0.02em
+	color: $color-white
 
 .h5 
 	font-family: $dm_sans
@@ -52,55 +68,53 @@ body
 	user-select: none
 
 
-em
-	font-style: italic
+
+p 
+	font-family: $dm_sans
+	font-weight: 400
+	font-size: 20px
+	line-height: 32px
+	color: $color-white
+
+	strong
+		font-weight: 700
+
+	a 
+	/*
+		font-family: inherit
+		text-decoration: none
+		font-weight: inherit
+		font-size: inherit
+		font-weight: bolder
+		letter-spacing: initial
+		color: inherit
+		background-size: 100% 2px
+		background-repeat: no-repeat
+		background-image: linear-gradient(45deg, $color-93degres, $color-93degres )
+		background-position: center bottom
+		cursor: pointer
+		transition: all .45s cubic-bezier(.4,0,0,1)
+		&:hover 
+			color: $color-93degres
+			*/
+		
+
 
 	
 a 	
-	font-family: $dm_sans
 	text-decoration: none
 	color: inherit
-	font-size: 20px
 
 	p
 		letter-spacing: initial
-
-	.cta
-		text-transform: uppercase
-		display: inline-block
-		position: relative
-		border: solid 2px
-		border-radius: 100px
-		padding: 15px 23px 15px 25px
-		user-select: none
-		transition: all .45s cubic-bezier(.4,0,0,1)
-		backface-visibility: hidden
-		
-		&:after
-			content: '\01F449'
-			font-size: 20px
-			margin-top: -4px
-			margin-left: -10px
-			opacity: 0
-			position: absolute
-			transition: all .45s cubic-bezier(.4,0,0,1)
-
-		&:hover
-			transform: scale(1.2)
-			padding-right: 40px
-
-			&:after
-				margin-left: 5px
-				opacity: 1
-				position: absolute
-		&:active
-			transform: scale(1.05)
 
 .cta--circle
 		display: table-cell
 
 
 		a
+			font-family: $dm_sans
+			font-weight: 400
 			font-size: 12px
 			display: inline-block
 			border-radius: 100%
@@ -118,50 +132,20 @@ a
 				top: -6px; /* Half of font-size, in our case it is (14px / 2) */	
 	
 .categories
-	cursor: pointer
-	text-transform: uppercase
-	user-select: none
-	overflow: hidden
 	color: $color-white
-
-	span
-		float: left
+	text-transform: uppercase
+	font-size: 20px
+	font-family: $dm_sans
+	font-weight: 400
+	letter-spacing:
 
 	img 
 		float: left
 		width: 27px
 		position: relative
 		margin-right: 10px
-		margin-top: 0px
 
 
-p 
-	font-family: $dm_sans
-	font-weight: 400
-	font-size: 17px
-	line-height: 32px
-	color: $color-dark
-
-	strong
-		font-weight: 600
-
-	a 
-		font-family: inherit
-		text-decoration: none
-		font-weight: inherit
-		font-size: inherit
-		font-weight: bolder
-		letter-spacing: initial
-		color: inherit
-		background-size: 100% 2px
-		background-repeat: no-repeat
-		background-image: linear-gradient(45deg, $color-93degres, $color-93degres )
-		background-position: center bottom
-		cursor: pointer
-		transition: all .45s cubic-bezier(.4,0,0,1)
-		&:hover 
-			color: $color-93degres
-		
 	
 
 blockquote 
@@ -207,10 +191,9 @@ li
 	background-position: center
 
 .item__img-wrap
-	--aspect-ratio: 21/9
 	overflow: hidden
 	max-width: 100%
-	padding-bottom: calc(100% / (var(--aspect-ratio)))
+	padding-bottom: 100%
 	will-change: transform
 
 .item:first-child .item__img-wrap
@@ -218,7 +201,7 @@ li
 
 .item__img
 
-	--overflow: 100px
+	--overflow: 60px
 	height: calc(100% + (2 * var(--overflow)))
 	top: calc( -1 * var(--overflow))
 	width: 100%

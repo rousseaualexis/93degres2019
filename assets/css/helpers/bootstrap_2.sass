@@ -93,6 +93,16 @@ $container-lg:                 $container-large-desktop !default
   margin-right: ($gutter / -2)
 
 
+@mixin clearfix()
+  &:before,
+  &:after
+    content: " " /* 1 */
+    display: block /* 2 */
+
+  &:after
+    clear: both
+
+
 // Generate the extra small columns
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) 
   position: relative
@@ -204,9 +214,8 @@ $container-lg:                 $container-large-desktop !default
 	@include container-fixed()
 
 .row
-	@include make-row()
-
-
+  @include make-row()
+  @include clearfix
 
 @mixin foo
 	position: relative

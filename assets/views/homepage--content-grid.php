@@ -1,8 +1,8 @@
 <?php if ('articles' === get_post_type()): ?>
-    <div class="col-xs-5 col-xs-offset-1">
+    <div class="item push-article col-xs-5 col-xs-offset-1">
             <?php
                 $thumbnail = get_field('thumbnail');
-                $thumbnail_url = $thumbnail['sizes']['thumbnail'];
+                $thumbnail_url = $thumbnail['sizes']['large'];
                 $id = get_the_id();
                 $terms = get_the_terms( $id, 'category' );
                 if (isset($terms)){
@@ -14,16 +14,15 @@
                     }}
             ?>  
             <a href="<?php the_permalink(); ?>">
-                <div class="image image--3-2 image_thumbnail" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
-                    <div class="image_thumbnail--hover">
-                        
-                    </div>
-                </div>
+                <div class="item__img-wrap image--3-2">
+                <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+                </div></div>
+                            
             </a>
-                <span class="categories h4"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><?php echo $term_name; ?> — <?php the_time(get_option('date_format')); ?>
-                </span>
+
+                <div class="categories"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
                 <a href="<?php the_permalink(); ?>">
-                <h1><?php the_title(); ?><?php if(!empty(get_field('subtitle'))){echo '<br><span>' . get_field('subtitle') . '</span>';}?></h1>
+                <span class="h2"><?php the_title(); ?><?php if(!empty(get_field('subtitle'))){echo '<br><span>' . get_field('subtitle') . '</span>';}?></span>
                 <p><?php echo get_field('summary'); ?></p>
                 </a>
     </div>

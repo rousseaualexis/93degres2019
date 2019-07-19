@@ -20,9 +20,7 @@
 	.h1
 
 
-		margin-bottom: $desktop-margin*1.5
-
-
+		margin-bottom: $desktop-margin*1
 		
 		[index="2"]
 			margin-left: (2 / $grid-columns * 100%)
@@ -54,13 +52,33 @@
 			position: relative
 
 				
+#other_articles
+
+	margin-top: $desktop-margin*3
+
+	.categories
+		margin-top: $desktop-margin
+
+	.push-article
+
+		&:nth-child(1)
+			.item__img-wrap
+				padding-bottom: 66.66%
+
+		&:nth-child(2)
+			.item__img-wrap
+				padding-bottom: 100%
+
+#more_articles
+
+	text-align: center
+
+	.cta--circle
+		display: table
+		width: 100%
+		margin-top: $desktop-margin/2
 
 
-#home-posts
-	+media-sm-and-less
-		margin-top: $header-height
-
-	& > div 
 	
 
 			
