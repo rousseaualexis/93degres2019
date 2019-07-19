@@ -30,12 +30,14 @@ body
 .h2
 	font-family: $gt_sectra
 	color: $color-white
-	font-size: 52px
-	line-height: 76px
+	font-size: 56px
+	font-size: 3.888888888888889VW
+	line-height: 80px
+	line-height: 5.555555555555555VW
 
 	strong
 		font-family: $dm_sans
-		font-weight: 700
+		font-weight: 400
 		letter-spacing: -0.02em
 		color: $color-93degres
 
@@ -48,7 +50,7 @@ body
 
 	strong
 		font-family: $dm_sans
-		font-weight: 700
+		font-weight: 400
 		letter-spacing: -0.02em
 		color: $color-93degres
 
@@ -60,9 +62,10 @@ body
 	letter-spacing: -0.02em
 	color: $color-white
 
-.h5 
+.big_title
 	font-family: $dm_sans
-	font-size: 49vw
+	font-size: 12.5VW
+	line-height: 12.5VW
 	text-transform: uppercase
 	color: $color-dark
 	user-select: none
@@ -112,6 +115,7 @@ a
 		display: table-cell
 
 
+
 		a
 			font-family: $dm_sans
 			font-weight: 400
@@ -123,6 +127,10 @@ a
 			padding: 40px
 			text-transform: uppercase
 			letter-spacing: 0.05em
+			transition: background 0.45s cubic-bezier(0.4, 0, 0, 1)
+
+			&:hover
+				background: $color-93degres
 			
 			div
 				color: $color-white
@@ -195,6 +203,7 @@ li
 	max-width: 100%
 	padding-bottom: 100%
 	will-change: transform
+	background: $color-black
 
 .item:first-child .item__img-wrap
 	--aspect-ratio: 8/10

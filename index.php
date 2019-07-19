@@ -72,6 +72,20 @@ Template Name: Homepage
                     </div>
                 </div>
             </div>
+
+
+            <div id="destinations" class="row">
+                    <span class="h4 col-xs-10 col-xs-offset-2">Nos destinations préférées</span>
+                    <span class="big_title">États-unis</span>
+                    <span class="big_title">Royaume Uni</span>
+                    <span class="big_title">Danemark</span>
+
+            </div>
+            
+            <div id="about" class="row">
+                    <span class="h4 col-xs-4 col-xs-offset-1">Nos destinations préférées</span>
+                    <span class="h2 col-xs-8">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
+            </div>
  
 </div>
 

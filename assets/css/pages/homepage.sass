@@ -44,7 +44,7 @@
 
 		z-index: -1
 		padding-right: 0
-		margin-top: $desktop-margin* -4
+		margin-top: $desktop-margin* -3
 
 		.image
 
@@ -54,18 +54,32 @@
 				
 #other_articles
 
-	margin-top: $desktop-margin*3
-
-	.categories
-		margin-top: $desktop-margin
+	margin-bottom: 0
 
 	.push-article
+		margin-bottom: $desktop-margin * 2
+
+		.item__img
+			transition: opacity 0.45s cubic-bezier(0.4, 0, 0, 1)
+		a
+
+
+			&:hover
+				.item__img
+					opacity: 0.25
+
+		.categories
+			margin-top: $desktop-margin
+			margin-bottom: $desktop-margin / 4
 
 		&:nth-child(1)
 			.item__img-wrap
 				padding-bottom: 66.66%
 
 		&:nth-child(2)
+			float: right
+			@include make-xs-column-pull(1)
+
 			.item__img-wrap
 				padding-bottom: 100%
 
@@ -79,7 +93,34 @@
 		margin-top: $desktop-margin/2
 
 
+#destinations
 	
+	background: $color-93degres
+	padding-top: $desktop-margin * 3
+	padding-bottom: $desktop-margin * 3
+
+	.h4
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: $desktop-margin/2
+
+	.big_title
+
+		&:nth-child(1n+1)
+			float: right
+			right: -10px
+			position: relative
+
+		&:nth-child(2n)
+			left: -10px
+			position: relative
+			float: left
+
+		&:hover
+			-webkit-text-stroke: 1px black
+			-webkit-text-fill-color: transparent /* Will override color (regardless of order) */
+
+
 
 			
 						
