@@ -76,10 +76,32 @@ Template Name: Homepage
 
             <div id="destinations" class="row">
                     <span class="h4 col-xs-10 col-xs-offset-2">Nos destinations préférées</span>
-                    <span class="big_title">États-unis</span>
-                    <span class="big_title">Royaume Uni</span>
-                    <span class="big_title">Danemark</span>
+                    <ul><?php
+                        $cat = get_query_var('cat');
+                        $args = array(
+                            'child_of' => $cat,
+                            'orderby' => 'name',
+                            'order' => 'ASC',
+                            
+                          'hierarchical' => 1,
+                          'taxonomy' => 'category',
+                          'hide_empty' => 1,
+                          'parent' => 0,
+                            );
+                            
+                            $categories = get_categories($args);
+                            foreach($categories as $category) { 
 
+                                    $thumbnail = get_field('flag', $category);
+                                    $thumbnail_url = $thumbnail['sizes']['large'];
+                                ?>
+                            <li class="big_title destination--name">
+                                <a href="<?php echo get_category_link( $category->term_id ); ?> "> <?php echo $category->name; ?></a>
+                                <div id="flag1" class="flag" style="background-image: url(<?php echo $thumbnail_url; ?>)"/></div>
+                                <canvas id="canvas"></canvas>
+                            </li>
+                        <?php } ?>
+                    </ul>
             </div>
             
             <div id="about" class="row">

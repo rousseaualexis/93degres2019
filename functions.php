@@ -21,17 +21,18 @@ add_action( 'init', 'remove_pages_editor' );
 */
 
 // FUNCTIONS TO REMOVE BASE POST FROM THE ADMIN
+
 function remove_menus(){
   remove_menu_page( 'edit.php', 'users.php', 'tools.php');
 }
 add_action( 'admin_menu', 'remove_menus' );
 
 add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
-/*
+
 function remove_default_post_type_menu_bar( $wp_admin_bar ) {
     $wp_admin_bar->remove_node( 'new-post' );
 }
-*/
+
 
 add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
 

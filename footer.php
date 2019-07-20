@@ -33,4 +33,5 @@
 <script src="<?php bloginfo('template_url') ?>/assets/js/infiniteslidev2.js" type="text/javascript"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/lining.js" type="text/javascript"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_url') ?>/assets/js/demo2.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/main.js"></script>
