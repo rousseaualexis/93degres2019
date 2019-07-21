@@ -1,8 +1,9 @@
-<div id="footer" class="col-xs-48">
-    <div id="logo_footer" class="col-xs-4 col-xs-offset-22">
-        <a href="<?php echo get_bloginfo( 'wpurl' );?>"><img class="image" src="<?php bloginfo('template_url') ?>/assets/img/logo_grey.png"/></a>
+<div id="footer" class="content row">
+    <div class="col-xs-14">
+        <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="big_title">93° Degrés</a>
+        <p> ©93.Degrés – by Alexis & Agathe</p>
     </div>
-    <p class="col-xs-48"> ©93.Degrés – by Alexis & Agathe</p>
+    
 </div>
 </main>
 <div class="bootstrap--grid container">
