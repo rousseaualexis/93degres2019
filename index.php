@@ -76,7 +76,7 @@ Template Name: Homepage
 
             <div id="destinations" class="row">
                     <span class="h4 col-xs-10 col-xs-offset-2">Nos destinations préférées</span>
-                    <ul><?php
+                    <?php
                         $cat = get_query_var('cat');
                         $args = array(
                             'child_of' => $cat,
@@ -89,19 +89,29 @@ Template Name: Homepage
                           'parent' => 0,
                             );
                             
-                            $categories = get_categories($args);
-                            foreach($categories as $category) { 
+                            $categories = get_categories($args); ?>
+                     <svg class="distort" width="350" height="450" viewBox="0 0 350 450">
+                                    <filter id="distortionFilter">
+                                        <feTurbulence id="feturbulence" type="fractalNoise" baseFrequency="0.0075 0.002" seed="0" width="100%" height="100%" result="noise"/>
+                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse" shape-rendering="optimizeQuality" />
+                                    </filter>
+                                    <g filter="url(#distortionFilter)">
+                                        <?php foreach($categories as $category) { 
 
-                                    $thumbnail = get_field('flag', $category);
+                                    $thumbnail = get_field('paper_flag', $category);
                                     $thumbnail_url = $thumbnail['sizes']['large'];
                                 ?>
-                            <li class="big_title destination--name">
-                                <a href="<?php echo get_category_link( $category->term_id ); ?> "> <?php echo $category->name; ?></a>
-                                <div id="flag1" class="flag" style="background-image: url(<?php echo $thumbnail_url; ?>)"/></div>
-                                <canvas id="canvas"></canvas>
-                            </li>
+                                        <image class="distort__img" x="50" y="50" shape-rendering="optimizeQuality"  xlink:href="<?php echo $thumbnail_url; ?>" height="350" width="250"/>
+                                        <?php } ?>
+                                    </g>
+                        </svg>
+                    <ul class="nav__menu">
+                           <?php foreach($categories as $category) {
+                                ?>
+                                <a href="<?php echo get_category_link( $category->term_id ); ?> " class="big_title destination--name menu__link"> <?php echo $category->name; ?></a>
                         <?php } ?>
                     </ul>
+
             </div>
             
             <div id="about" class="row">

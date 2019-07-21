@@ -27,22 +27,24 @@
         else if (e.clientX || e.clientY) 	{
             posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
             posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+
         }
         return { x : posx, y : posy }
+
+
     }
     
     let winsize;
     const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
     calcWinsize();
     window.addEventListener('resize', calcWinsize);
-
     const feDisplacementMapEl = document.querySelector('feDisplacementMap');
 
     class Menu {
         constructor() {
             this.DOM = {
                 svg: document.querySelector('svg.distort'),
-                menu: document.querySelector('nav.menu')
+                menu: document.querySelector('ul.nav__menu')
             };
             this.DOM.imgs = [...this.DOM.svg.querySelectorAll('g > image')];
             this.DOM.menuLinks = [...this.DOM.menu.querySelectorAll('.menu__link')];
@@ -62,8 +64,6 @@
             window.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
 
             this.DOM.menuLinks.forEach((item, pos) => {
-                charming(item);
-                const letters = [...item.querySelectorAll('span')];
 
                 const mouseenterFn = () => {
                     if ( this.current !== -1 ) {
@@ -78,23 +78,11 @@
                     else {
                         TweenMax.set(this.DOM.imgs[this.current], {opacity: 1});
                     }
+                    console.log("hello")
                     
-                    TweenMax.staggerTo(letters, 0.2, {
-                        ease: Sine.easeInOut,
-                        y: this.lastMousePos.translation.y < this.mousePos.y ? 30 : -30,
-                        startAt: {opacity: 1, y: 0},
-                        opacity: 0,
-                        yoyo: true,
-                        yoyoEase: Back.easeOut,
-                        repeat: 1,
-                        stagger: {
-                            grid: [1,letters.length-1],
-                            from: 'center',
-                            amount: 0.12
-                        }
-                    });
                 };
                 item.addEventListener('mouseenter', mouseenterFn);
+               
             });
 
             const mousemenuenterFn = () => this.fade = true;
@@ -106,8 +94,8 @@
         render() {
             this.lastMousePos.translation.x = lerp(this.lastMousePos.translation.x, this.mousePos.x, 0.1);
             this.lastMousePos.translation.y = lerp(this.lastMousePos.translation.y, this.mousePos.y, 0.1);
-            this.DOM.svg.style.transform = `translateX(${(this.lastMousePos.translation.x-winsize.width/2)}px) translateY(${this.lastMousePos.translation.y-winsize.height/2}px)`;
-            
+            this.DOM.svg.style.transform = `translateX(${(this.lastMousePos.translation.x-winsize.width/2)}px)`;
+            this.DOM.svg.style.top = `${this.lastMousePos.translation.y-winsize.width/2}px`;
             // Scale goes from 0 to 100 for mouseDistance values between 0 to 100
             this.lastMousePos.displacement.x = lerp(this.lastMousePos.displacement.x, this.mousePos.x, 0.1);
             this.lastMousePos.displacement.y = lerp(this.lastMousePos.displacement.y, this.mousePos.y, 0.1);
@@ -116,6 +104,8 @@
             feDisplacementMapEl.scale.baseVal = this.dmScale;
 
             requestAnimationFrame(() => this.render());
+
+
         }
     }
 

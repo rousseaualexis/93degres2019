@@ -94,10 +94,11 @@
 
 
 #destinations
-	
+	position: relative
 	background: $color-93degres
 	padding-top: $desktop-margin * 3
 	padding-bottom: $desktop-margin * 3
+	text-align: center
 
 	.h4
 		text-align: center
@@ -124,12 +125,21 @@
 		width: 25%
 
 
-.flag
-	width: 300px
-	height: 200px
-	position: absolute
+.distort
+	width: 40vw
+	height: 60vw
+	position: fixed
+	pointer-events: none
+	will-change: transform
+	left: calc(50% - 20vw)
+	margin-top: calc(50% - 30vw)
 
+	&__img
+		opacity: 0
 
+#about
+	.h4
+		margin-top: 0.9vw
 
 
 
