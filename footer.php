@@ -12,7 +12,7 @@
                 foreach( $categories as $category ) {
                     if (0 != $category->parent){
                     $category_link = sprintf( 
-                        '<a href="%1$s?type=guides" alt="%2$s">#%3$s</a>',
+                        '<span>#</span><a href="%1$s?type=guides" alt="%2$s">%3$s</a>',
                         esc_url( get_category_link( $category->term_id ) ),
                         esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
                         esc_html( $category->name )
