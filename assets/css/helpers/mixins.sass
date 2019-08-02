@@ -52,6 +52,8 @@
     @content
 
 @mixin a-hover
+    position: relative
+    overflow: hidden
     &:after
       content: ''
       position: absolute
@@ -63,10 +65,8 @@
       transform-origin: right
       background: $color-white
       transition: transform 0.35s cubic-bezier(0.4, 0, 0, 1)
-
-
+      
     &:hover
-
       &:after
         transform: none
         transform-origin: left
