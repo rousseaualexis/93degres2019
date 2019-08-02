@@ -45,7 +45,7 @@ Template Name: Homepage
                 
                 <div class="categories col-xs-offset-1"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_date('d.m.Y'); ?></span></div>
                 <div class="cta--circle col-xs-offset-1">
-                    <a class="" href="<?php the_permalink(); ?>"><div>Découvrir</div></a>
+                    <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
                 </div>
 
                 <div id="homepage--cover--image" class="item col-xs-9">
@@ -68,7 +68,7 @@ Template Name: Homepage
                 <div class="col-xs-10 col-xs-offset-2">
                     <span class="h2">Envie de voir plus d’articles ?</span>
                     <div class="cta--circle">
-                        <a class="" href="#"><div>Voir plus</div></a>
+                        <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@ Template Name: Homepage
                      <svg class="distort" width="350" height="450" viewBox="0 0 350 450">
                                     <filter id="distortionFilter">
                                         <feTurbulence id="feturbulence" type="fractalNoise" baseFrequency="0.0075 0.002" seed="0" width="100%" height="100%" result="noise"/>
-                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse" shape-rendering="optimizeQuality" />
+                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="500" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse" shape-rendering="optimizeQuality" />
                                     </filter>
                                     <g filter="url(#distortionFilter)">
                                         <?php foreach($categories as $category) { 

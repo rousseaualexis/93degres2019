@@ -18,9 +18,10 @@ body
 
 	strong
 		font-family: $dm_sans
-		font-weight: 700
+		font-weight: 400
 		letter-spacing: -0.02em
 		color: $color-93degres
+		-webkit-font-smoothing: antialiased
 
 // 		span
 //		font-size: 24px
@@ -50,6 +51,7 @@ body
 
 	strong
 		font-family: $dm_sans
+		-webkit-font-smoothing: antialiased
 		font-weight: 400
 		letter-spacing: -0.02em
 		color: $color-93degres
@@ -57,6 +59,7 @@ body
 
 .h4
 	font-family: $dm_sans 
+	-webkit-font-smoothing: antialiased
 	font-size: 22px
 	line-height: 24px
 	letter-spacing: -0.02em
@@ -64,16 +67,28 @@ body
 
 .big_title
 	font-family: $dm_sans
+	-webkit-font-smoothing: antialiased
 	font-size: 12.5VW
 	line-height: 12.5VW
 	text-transform: uppercase
 	color: $color-dark
 	user-select: none
 
+a
+	font-size: 20px
+	font-family: $dm_sans
+	-webkit-font-smoothing: antialiased
+	font-weight: 400
+	color: $color-white
+	text-decoration: none
+
+	p
+		letter-spacing: initial
 
 
 p 
 	font-family: $dm_sans
+	-webkit-font-smoothing: antialiased
 	font-weight: 400
 	font-size: 20px
 	line-height: 32px
@@ -103,41 +118,71 @@ p
 		
 
 
-	
-a 	
-	text-decoration: none
-	color: $color-white
-
-	p
-		letter-spacing: initial
-
 .cta--circle
 		display: table-cell
 
 
 
 		a
+			position: relative
 			font-family: $dm_sans
+			-webkit-font-smoothing: initial
 			font-weight: 400
 			font-size: 12px
 			display: inline-block
-			border-radius: 100%
-			background: $color-black
 			min-width: 10px
 			padding: 40px
 			text-transform: uppercase
 			letter-spacing: 0.05em
-			transition: background 0.45s cubic-bezier(0.4, 0, 0, 1)
-
-			&:hover
-				background: $color-93degres
 			
-			div
+			span
+				display: block
+				z-index: 1
 				color: $color-white
 				position: relative
 				height: 0
 				padding: 50% 0
-				top: -6px; /* Half of font-size, in our case it is (14px / 2) */	
+				top: -6px; /* Half of font-size, in our case it is (14px / 2) */
+
+			.circle
+				position: absolute
+				overflow: hidden
+				display: block
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				border-radius: 100%
+				background: $color-black
+				transform: scale(1)
+				transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1)
+				
+
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					height: 100%
+					border-radius: 100%
+					transform: scale(0)
+					background: $color-93degres
+					transition: transform 0.35s cubic-bezier(0.4, 0, 0, 1)
+
+
+			&:hover
+
+				.circle
+
+					transform: scale(1.2)
+					&:after
+						transform: scale(1)
+
+			
+
+			
+			
+
 	
 .categories
 	color: $color-white
