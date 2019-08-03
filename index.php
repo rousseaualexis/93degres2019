@@ -98,7 +98,7 @@ Template Name: Homepage
                                     $thumbnail_url = $thumbnail['sizes']['large'];
                                 ?>
                                 <a href="<?php echo get_category_link( $category->term_id ); ?> " class="big_title homepage--destinations--names menu__link"> <?php echo $category->name; ?>
-                                     <div class="homepage--destinations--image image image--3-2" style="background-image: url(<?php echo $thumbnail_url; ?>);"></div>
+                                     <div class="homepage--destinations--image__container"><div class="homepage--destinations--image" style="background-image: url(<?php echo $thumbnail_url; ?>);"></div></div>
                                 </a>
                         <?php } ?>
                     </ul>

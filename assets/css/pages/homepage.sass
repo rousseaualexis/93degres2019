@@ -72,12 +72,13 @@
 			margin-top: $desktop-margin
 			margin-bottom: $desktop-margin / 4
 
-		&:nth-child(1)
+		&:nth-child(3)
 			.item__img-wrap
-				padding-bottom: 66.66%
+				padding-bottom: 56.25%
 
 		&:nth-child(2)
 			float: right
+			margin-left: 0
 			@include make-xs-column-pull(1)
 
 			.item__img-wrap
@@ -95,18 +96,26 @@
 
 .homepage--destinations
 	position: relative
-	background: $color-93degres
-	padding-top: $desktop-margin * 3
 	padding-bottom: $desktop-margin * 3
 	text-align: center
+	overflow: hidden
 
 	.h4
 		text-align: center
 		text-transform: uppercase
 		margin-bottom: $desktop-margin/2
+		padding-top: $desktop-margin * 3
+
+	&::after
+		background: $color-93degres
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: -2
 
 	&--names
 		position: initial
+		z-index: 100
 
 		&:nth-child(1n+1)
 			float: right
@@ -119,13 +128,35 @@
 		&:hover
 			-webkit-text-stroke: 1px black
 			-webkit-text-fill-color: transparent /* Will override color (regardless of order) */
-	
+
+			.homepage--destinations--image
+		        transform: none
+		        transform-origin: left
+			
 	&--image
-		position: absolute
-		width: 50%
-		left: 25%
-		top: 0
-		margin-top: -16.66%
+
+		position: relative
+		width: 100%
+		height: 100%
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		transform: scaleX(0)
+		transform-origin: right
+		transition: transform 0.35s cubic-bezier(0.4, 0, 0, 1)
+
+
+		&__container
+			position: absolute
+			width: 50%
+			left: 25%
+			top: 0
+			bottom: 0
+			z-index: -1
+			overflow: hidden
+
+    
+
 
 
 
