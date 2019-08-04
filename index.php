@@ -52,8 +52,11 @@ Template Name: Homepage
                     <div class="item__img-wrap image--21-9">
                     <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                     </div></div>
+                    <div id="h1--seo"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
                 </div>
+
             </div>
+
             <div id="other_articles" class="content row">
     <?php
             else :
