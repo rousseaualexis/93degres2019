@@ -113,6 +113,23 @@ Template Name: Homepage
                     <span class="h2 col-xs-8">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
             </div>
  
+
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1"></div>
+    </div>
 </div>
 
 <?php get_footer(); ?>

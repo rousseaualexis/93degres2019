@@ -44,7 +44,6 @@
     </div>
     
 </div>
-</main>
 <div class="bootstrap--grid container">
     <div class="row">
     <div class="col-xs-1"><div></div></div>
@@ -62,8 +61,9 @@
     <div class="col-xs-1"><div></div></div>
     <div class="col-xs-1"><div></div></div>
 </div>
-</div>
-</div>
+</main>
+
+
 	<script src="<?php bloginfo('template_url') ?>/assets/js/jquery.js"></script>
     <script src="<?php bloginfo('template_url') ?>/assets/js/TweenMax.min.js"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/lining.js" type="text/javascript"></script>
