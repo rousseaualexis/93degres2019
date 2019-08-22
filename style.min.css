@@ -6,7 +6,7 @@
 @font-face{font-family:'dm_sans';src:url("assets/css/fonts/dmsans-regular-webfont.woff2") format("woff2"),url("assets/css/fonts/dmsans-regular-webfont.woff") format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:'dm_sans';src:url("assets/css/fonts/dmsans-regularitalic-webfont.woff2") format("woff2"),url("assets/css/fonts/dmsans-regularitalic-webfont.woff") format("woff");font-weight:400;font-style:italic}
 /*! Bootstrap v3.0.0 Copyright 2013 Twitter, Inc Licensed under the Apache License v2.0 http://www.apache.org/licenses/LICENSE-2.0 Designed and built with all the love in the world by @mdo and @fat. */*,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box}
-.container{margin-right:auto;margin-left:auto;padding-left:5px;padding-right:5px}
+.container{margin-right:auto;margin-left:auto;padding-left:5px;padding-right:5px;padding:0;width:100%}
 .container:before,.container:after{content:" ";display:block}
 .container:after{clear:both}
 .row{margin-left:-5px;margin-right:-5px}
@@ -67,13 +67,10 @@
 .col-xs-offset-11{margin-left:78.5714285714%}
 .col-xs-offset-12{margin-left:85.7142857143%}
 .col-xs-offset-13{margin-left:92.8571428571%}
-.bootstrap--grid{height:100%;position:fixed;top:0;z-index:-100}
-.bootstrap--grid .col-xs-1{height:100vh}
-.bootstrap--grid .col-xs-1 div{position:relative;float:left;width:100%;height:100%;border-right:1px solid red;border-left:1px solid red;opacity:1;padding-top:15px;padding-bottom:15px;border:1px solid #ddd;border:1px solid darkgreen}
 *::-moz-selection{background-color:rgba(0,0,0,0.05)}
 *::selection{background-color:rgba(0,0,0,0.05)}
 body{background-color:#202227}
-.h1{font-family:"gt_sectra",serif;color:#fff;font-size:100px;font-size:6.944vw;line-height:100px;line-height:6.944vw;text-transform:uppercase}
+.h1{font-family:"gt_sectra",serif;color:#fff;font-size:100px;font-size:8.333vw;line-height:100px;line-height:8.333vw;text-transform:uppercase}
 .h1 strong{font-family:"dm_sans",sans-serif;font-weight:400;letter-spacing:-0.02em;color:#ffbc00;-webkit-font-smoothing:antialiased}
 .h2{font-family:"gt_sectra",serif;color:#fff;font-size:56px;font-size:3.888888888888889VW;line-height:80px;line-height:5.555555555555555VW}
 .h2 strong{font-family:"dm_sans",sans-serif;font-weight:400;letter-spacing:-0.02em;color:#ffbc00}
@@ -259,7 +256,7 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 #homepage--cover .h1 strong{color:#ffbc00}
 #homepage--cover--image{float:right;z-index:-1;padding-right:0;margin-top:-150px}
 #homepage--cover--image .image{position:relative}
-#h1--seo{float:right;margin-right:15px}
+#h1--seo{float:right;margin-right:15px;text-align:right;width:100%}
 #h1--seo h1{font-family:"dm_sans",sans-serif;font-weight:400;font-size:14px;color:rgba(255,255,255,0.5)}
 #other_articles{margin-bottom:0}
 #other_articles .push-article{margin-bottom:100px}
@@ -459,12 +456,19 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 .un-tiers--container{position:relative;margin-left:6.24999999%}
 .full-width--container .full-width blockquote{margin-bottom:50px}
 .full-width--container .un-tiers__image{margin-bottom:50px}
-}@media only screen and (max-width:767px){.container{margin-bottom:60px}
+}@media only screen and (max-width:767px){.h1{font-size:10vw;line-height:10vw}
+.h2{font-size:7vw;line-height:9vw}
+.h3{font-size:32px;line-height:38px}
+.h4{font-size:16px;line-height:24px}
+.categories{font-size:16px}
+.categories img{margin-top:1px}
+.container{margin-bottom:60px}
+.container .row{margin-bottom:75px}
 .sous-cat{padding-top:0;padding-bottom:0}
-#header{position:fixed;height:100px;background:#fff;margin-top:0;border-bottom:solid 1px #f7f6f2}
+#header{height:80px;margin-top:0}
 #header #logo{margin-top:25px}
-.menu-principal-container,.menu-secondary-container{position:absolute;left:0;height:70vh;padding-bottom:30vh;width:100%;text-align:center;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-transition-delay:.1s;transition-delay:.1s;display:table;background:#f7f6f2;top:100vh}
-.menu-principal-container.active-menu,.menu-secondary-container.active-menu{top:100px}
+.menu-principal-container,.menu-secondary-container{position:absolute;left:0;height:70vh;padding-bottom:30vh;width:100%;text-align:center;-webkit-transition:all .45s cubic-bezier(0.4,0,0,1);transition:all .45s cubic-bezier(0.4,0,0,1);-webkit-transition-delay:.1s;transition-delay:.1s;display:table;background:#f7f6f2;top:100vh;display:none}
+.menu-principal-container.active-menu,.menu-secondary-container.active-menu{top:80px}
 .menu-principal-container ul,.menu-secondary-container ul{display:table-cell;vertical-align:middle}
 .menu-principal-container li,.menu-secondary-container li{display:inline-block;width:100%;margin:10px 0}
 .menu-principal-container #link--instagram,.menu-secondary-container #link--instagram{position:relative;margin:30px 20px;right:auto;bottom:auto;width:20px;height:20px}
@@ -481,6 +485,17 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 .deux-tiers--container .deux-tiers__paragraph{margin-bottom:50px}
 .un-tiers--container .un-tiers__text{padding:50px}
 .full-width--container .full-width{margin-bottom:0}
+#homepage--cover{position:relative;padding-top:66.66%;margin-top:0;margin-top:30px}
+#homepage--cover .h1{margin-bottom:25px;margin-top:-5vw}
 #homepage--cover .h1 [index="2"]{margin-left:0;left:100px}
 #homepage--cover .h1 [index="3"]{margin-left:0;left:50px}
+#homepage--cover--image{position:absolute;margin-top:0;right:0;top:0}
+#homepage--cover--image .image--21-9{padding-bottom:66.66%}
+#h1--seo{position:absolute;top:-30px;text-align:center;margin:0}
+#h1--seo h1{margin:0;font-size:12px}
+#other_articles .push-article{margin-bottom:50px}
+#other_articles .push-article .categories{margin-top:25px;margin-bottom:12.5px}
+#other_articles .push-article:nth-child(3) .item__img-wrap{padding-bottom:66.66%}
+#other_articles .push-article:nth-child(2) .item__img-wrap{padding-bottom:66.66%}
+#about .h4{margin-bottom:12.5px;margin-top:0}
 }

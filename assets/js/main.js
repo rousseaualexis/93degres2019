@@ -115,7 +115,7 @@ var site = (function() {
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.1,
+                    ease: 0.2,
                     // the maximum value to translate the image is set in a CSS variable (--overflow)
                     maxValue: parseInt(getComputedStyle(this.DOM.image).getPropertyValue('--overflow'), 10),
                     // current value setter
@@ -202,7 +202,7 @@ var site = (function() {
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.1,
+                    ease: 0.2,
                     // current value setter
                     // in this case the value of the translation will be the same like the document scroll
                     setValue: () => docScroll

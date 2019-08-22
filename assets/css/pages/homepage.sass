@@ -1,6 +1,12 @@
 #homepage--cover
 
 	margin-top: $desktop-margin * 2
+	
+	+media-sm-and-less
+		position: relative
+		padding-top: 66.66%
+		margin-top: 0
+		margin-top: 30px
 
 	.categories
 		float: left
@@ -18,47 +24,77 @@
 
 
 	.h1
-
-
-		margin-bottom: $desktop-margin*1
+		margin-bottom: $desktop-margin
 		
+		+media-sm-and-less
+			margin-bottom: $mobile-margin
+			margin-top: -5vw
+
 		[index="2"]
 			margin-left: (2 / $grid-columns * 100%)
+			
 			+media-sm-and-less
 				margin-left: 0
 				left: ($desktop-margin * 2)
 			    
 		[index="3"]
 			margin-left: (1 / $grid-columns * 100%)
+			
 			+media-sm-and-less
 				margin-left: 0
 				left: $desktop-margin
 
 		strong
-
 			color: $color-93degres
+
+		
+
 
 	&--image
 
 		float: right
-
 		z-index: -1
 		padding-right: 0
 		margin-top: $desktop-margin* -3
 
+		+media-sm-and-less
+	
+
+			position: absolute
+			margin-top: 0
+			right: 0
+			top: 0
+
+		.image--21-9
+			+media-sm-and-less
+				padding-bottom: 66.66%
+
 		.image
-
-
 			position: relative
+
+
+
 #h1--seo
 	float: right
 	margin-right: 15px
+	text-align: right
+	width: 100%
+
+	+media-sm-and-less
+		position: absolute
+		top: -30px
+		text-align: center
+		margin: 0
 
 	h1
 		font-family: $dm_sans
 		font-weight: 400
 		font-size: 14px
 		color: rgba($color-white, 0.5)
+		
+		+media-sm-and-less
+			margin: 0
+			font-size: 12px
 
 
 				
@@ -68,6 +104,9 @@
 
 	.push-article
 		margin-bottom: $desktop-margin * 2
+
+		+media-sm-and-less
+			margin-bottom: $mobile-margin * 2
 
 		.item__img
 			transition: opacity 0.45s cubic-bezier(0.4, 0, 0, 1)
@@ -82,9 +121,16 @@
 			margin-top: $desktop-margin
 			margin-bottom: $desktop-margin / 4
 
+			+media-sm-and-less
+				margin-top: $mobile-margin
+				margin-bottom: $mobile-margin / 2
+
 		&:nth-child(3)
 			.item__img-wrap
 				padding-bottom: 56.25%
+
+				+media-sm-and-less
+					padding-bottom: 66.66%
 
 		&:nth-child(2)
 			float: right
@@ -93,6 +139,9 @@
 
 			.item__img-wrap
 				padding-bottom: 100%
+				
+				+media-sm-and-less
+					padding-bottom: 66.66%
 
 #more_articles
 
@@ -185,6 +234,11 @@
 #about
 	.h4
 		margin-top: 0.9vw
+
+		+media-sm-and-less
+
+			margin-bottom: $mobile-margin/2
+			margin-top: 0
 
 
 

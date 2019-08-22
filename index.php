@@ -36,7 +36,7 @@ Template Name: Homepage
                     }
                 ?>
                 
-                <div class="h1 col-xs-10 col-xs-offset-1" data-lining><?php the_title(); ?></div>
+                <div class="h1 col-xs-offset-1 col-xs-12" data-lining><?php the_title(); ?></div>
                 <?php 
                     $thumbnail = get_field( 'thumbnail' );
                     $thumbnail_url = $thumbnail['sizes']['large'];
@@ -48,13 +48,12 @@ Template Name: Homepage
                     <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
                 </div>
 
-                <div id="homepage--cover--image" class="item col-xs-9">
+                <div id="homepage--cover--image" class="item col-xs-14 col-sm-9">
                     <div class="item__img-wrap image--21-9">
                     <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                     </div></div>
-                    <div id="h1--seo"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
                 </div>
-
+                <div id="h1--seo"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
             </div>
 
             <div id="other_articles" class="content row">
@@ -68,7 +67,7 @@ Template Name: Homepage
             </div>
 
             <div id="more_articles" class="row">
-                <div class="col-xs-10 col-xs-offset-2">
+                <div class="col-xs-12 col-xs-offset-1 col-md-10 col-md-offset-2">
                     <span class="h2">Envie de voir plus d’articles ?</span>
                     <div class="cta--circle">
                         <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
@@ -109,27 +108,10 @@ Template Name: Homepage
             </div>
             
             <div id="about" class="row">
-                    <span class="h4 col-xs-4 col-xs-offset-1">Nos destinations préférées</span>
-                    <span class="h2 col-xs-8">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
+                    <span class="h4 col-xs-12 col-xs-offset-1 col-sm-4 col-sm-offset-1">Nos destinations préférées</span>
+                    <span class="h2 col-xs-12 col-xs-offset-1 col-sm-8 col-sm-offset-0">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
             </div>
  
-
-    <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-        <div class="col-xs-1"></div>
-    </div>
 </div>
 
 <?php get_footer(); ?>

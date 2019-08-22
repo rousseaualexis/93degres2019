@@ -11,9 +11,9 @@ body
 	font-family: $gt_sectra
 	color: $color-white
 	font-size: 100px
-	font-size: 6.944vw
+	font-size: 8.333vw
 	line-height: 100px
-	line-height: 6.944vw
+	line-height: 8.333vw
 	text-transform: uppercase
 
 	strong
@@ -23,10 +23,10 @@ body
 		color: $color-93degres
 		-webkit-font-smoothing: antialiased
 
-// 		span
-//		font-size: 24px
-//		text-transform: none
-//		line-height: initial
+	+media-sm-and-less
+		font-size: 10vw
+		line-height: 10vw
+
 
 .h2
 	font-family: $gt_sectra
@@ -35,6 +35,10 @@ body
 	font-size: 3.888888888888889VW
 	line-height: 80px
 	line-height: 5.555555555555555VW
+
+	+media-sm-and-less
+		font-size: 7vw
+		line-height: 9vw
 
 	strong
 		font-family: $dm_sans
@@ -48,6 +52,10 @@ body
 	color: $color-white
 	font-size: 38px
 	line-height: 48px
+
+	+media-sm-and-less
+		font-size: 32px
+		line-height: 38px
 
 	strong
 		font-family: $dm_sans
@@ -64,6 +72,9 @@ body
 	line-height: 24px
 	letter-spacing: -0.02em
 	color: $color-white
+	+media-sm-and-less
+		font-size: 16px
+		line-height: 24px
 
 .big_title
 	font-family: $dm_sans
@@ -187,12 +198,18 @@ p
 	font-weight: 400
 	letter-spacing:
 
+	+media-sm-and-less
+		font-size: 16px
+
 	img 
 		float: left
 		width: 27px
 		position: relative
 		margin-right: 10px
 		margin-top: 2px
+
+		+media-sm-and-less
+			margin-top: 1px
 
 
 	
@@ -220,6 +237,9 @@ li
 
 	.row
 		margin-bottom: $desktop-margin*3
+
+		+media-sm-and-less
+			margin-bottom: $mobile-margin*3
 
 .table 
 	display: table
