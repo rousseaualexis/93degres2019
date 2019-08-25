@@ -23,7 +23,6 @@
                 <div class="categories"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
                 <a href="<?php the_permalink(); ?>">
                 <span class="h3"><?php the_title(); ?><?php if(!empty(get_field('subtitle'))){echo '<br><span>' . get_field('subtitle') . '</span>';}?></span>
-                <p><?php echo get_field('summary'); ?></p>
                 </a>
     </div>
 <?php endif; ?>

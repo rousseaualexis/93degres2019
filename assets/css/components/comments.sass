@@ -101,14 +101,22 @@
 input 
 	width: 100%
 	font-size: 11px
-	padding: 15px 0 15px 15px
-	border: 1px solid $light-grey
-	margin-top: 25px
+	padding: 15px 0 15px 0px
+	border: none
+	border-bottom: 1px solid rgba($color-white, 0.25)
+	margin-top: 5
 	font-family: $sans_serif
+	color: $color-white
+
+		
+	background: none
 	
 	&:focus 
 		outline: none
-		background: $light-grey
+
+	&:placeholder-shown
+		border-bottom: 1px solid rgba($color-white, 0.25)
+
 
 .comment-form-author 
 	padding-right: 17px

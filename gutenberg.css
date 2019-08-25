@@ -1,0 +1,17 @@
+.wp-block{
+	max-width: 75%;
+}
+.acf--testimonial blockquote{
+	width: 100%;
+	padding: 25px;
+	margin: 0;
+}
+
+.acf--testimonial blockquote p{
+	margin: 0;
+	margin-bottom: 20px
+}
+
+.acf--testimonial img{
+	width: 25%
+}

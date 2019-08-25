@@ -615,3 +615,118 @@ function jdn_post_type_terms_clauses( $clauses, $taxonomy, $args ) {
  }
  return $clauses;
 }
+
+
+
+/*--------------------------------------------------------------------------------
+    ACF Block
+--------------------------------------------------------------------------------*/
+
+function wds_gutenberg_assets() {
+  wp_enqueue_style( 'wds-gutenberg-admin', get_stylesheet_directory_uri() . '/gutenberg.css', array(), '1.0.0' );
+}
+add_action( 'enqueue_block_assets', 'wds_gutenberg_assets' );
+
+/*
+add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
+ 
+function misha_allowed_block_types( $allowed_blocks ) {
+ 
+  return array(
+    'core/heading',
+    'core/paragraph'
+  );
+ 
+}
+*/
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+  
+  // check function exists
+  if( function_exists('acf_register_block') ) {
+    
+    
+    // register Quote block
+    acf_register_block(array(
+      'name'        => 'big-title',
+      'title'       => __('Big Title'),
+      'description'   => __('A custom pig title block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-quote',
+      'keywords'      => array( 'intro', 'quote', 'text' ),
+    ));
+    // register Image Full block
+    acf_register_block(array(
+      'name'        => 'image-full',
+      'title'       => __('Image Full'),
+      'description'   => __('A custom Image full block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'full', 'picture' ),
+    ));
+    // register Deux tiers un tiers block
+    acf_register_block(array(
+      'name'        => 'image-deux-tiers-un-tiers',
+      'title'       => __('Image Deux Tiers / Un Tiers'),
+      'description'   => __('A custom image block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'deux tiers', 'un tiers' ),
+    ));
+    // register Un tiers Deux tiers block
+    acf_register_block(array(
+      'name'        => 'image-un-tiers-deux-tiers',
+      'title'       => __('Image Un Tiers / Deux Tiers'),
+      'description'   => __('A custom image block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'deux tiers', 'un tiers' ),
+    ));
+    // register One Image block
+    acf_register_block(array(
+      'name'        => 'image-one',
+      'title'       => __('One Image'),
+      'description'   => __('A custom Image block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'one', 'one image' ),
+    ));
+    // register Paragraph block
+    acf_register_block(array(
+      'name'        => 'paragraph',
+      'title'       => __('Paragraph'),
+      'description'   => __('A custom paragraph block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'editor-alignleft',
+      'keywords'      => array( 'pargraph', 'text' ),
+    ));
+    // register Title block
+    acf_register_block(array(
+      'name'        => 'title',
+      'title'       => __('Title'),
+      'description'   => __('A custom title block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'editor-bold',
+      'keywords'      => array( 'pargraph', 'text' ),
+    ));
+  }
+}
+
+function my_acf_block_render_callback( $block ) {
+  
+  // convert name ("acf/testimonial") into path friendly slug ("testimonial")
+  $slug = str_replace('acf/', '', $block['name']);
+  
+  // include a template part from within the "template-parts/block" folder
+  if( file_exists( get_theme_file_path("/assets/views/template-parts/block/content-{$slug}.php") ) ) {
+    include( get_theme_file_path("/assets/views/template-parts/block/content-{$slug}.php") );
+  }
+}

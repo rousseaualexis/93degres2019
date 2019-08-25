@@ -39,6 +39,6 @@
             endwhile;
         endif;
         
-        get_template_part('assets/views/content-realated', $template); 
+      //  get_template_part('assets/views/content-realated', $template); 
     ?>
 </div>

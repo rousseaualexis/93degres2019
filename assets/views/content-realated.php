@@ -1,6 +1,6 @@
 <?php
 $posts = get_field('realated');
-if ($posts): ?>
+if ($posts != NULL): ?>
 <div id="realated" class="col-xs-48">
     <div class="title"><h3>Découvrir</h3></div>
     <div class="trait"></div>
@@ -15,5 +15,6 @@ if ($posts): ?>
 </div>
 </div>
 <?
-endif;
+else :
+endif
 ?>
