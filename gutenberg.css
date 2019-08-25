@@ -15,3 +15,10 @@
 .acf--testimonial img{
 	width: 25%
 }
+
+
+.my-slider li{
+	list-style-type: none;
+	display: inline;
+	z-index: 2;
+}

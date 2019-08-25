@@ -705,7 +705,7 @@ function my_acf_init() {
       'render_callback' => 'my_acf_block_render_callback',
       'category'      => 'formatting',
       'icon'        => 'editor-alignleft',
-      'keywords'      => array( 'pargraph', 'text' ),
+      'keywords'      => array( 'paragraph', 'text' ),
     ));
     // register Title block
     acf_register_block(array(
@@ -715,7 +715,17 @@ function my_acf_init() {
       'render_callback' => 'my_acf_block_render_callback',
       'category'      => 'formatting',
       'icon'        => 'editor-bold',
-      'keywords'      => array( 'pargraph', 'text' ),
+      'keywords'      => array( 'paragraph', 'text' ),
+    ));
+    // register Slider block
+    acf_register_block(array(
+      'name'        => 'slider',
+      'title'       => __('Slider'),
+      'description'   => __('A custom Slider block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'Slider', 'Gallery' ),
     ));
   }
 }

@@ -294,6 +294,23 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 #single--content h2{margin-bottom:50px}
 #single--introduction h1{margin-bottom:0;margin-top:50px}
 #single--introduction__thumbnail{float:right;margin-top:-5vw;z-index:-1}
+.my-slider{-webkit-padding-start:0;padding-inline-start:0;cursor:-webkit-grab;cursor:grab;-webkit-transition:all 1s cubic-bezier(0.2,0.2,0.1,1) !important;transition:all 1s cubic-bezier(0.2,0.2,0.1,1) !important}
+.slide{vertical-align:middle !important;padding-right:7.1428571429vw}
+.slide img{max-width:100vh;max-height:80vh;width:auto !important;height:auto}
+.slide--ghost{width:calc(13.6vw + 5px);height:100%}
+.tns-outer{position:relative}
+.tns-inner{margin:0 7.1428571429% !important;padding-left:4px;padding-right:5px}
+.tns-controls{display:none}
+.tns-controls button{width:50px;height:50px;border-radius:50%;background:#fff;border-color:none !important}
+.tns-controls button[data-controls="prev"]{text-indent:-9999px}
+.tns-controls button[data-controls="prev"]:after{content:"<";text-indent:0;display:block}
+.tns-controls button[data-controls="next"]{text-indent:-9999px}
+.tns-controls button[data-controls="next"]:after{content:">";text-indent:0;display:block}
+.tns-nav{bottom:-25px;width:100%;text-align:center}
+.tns-nav button{width:5px;height:14px;border:0;border-radius:50%;position:relative;background:#202227}
+.tns-nav button:before{content:"";padding:3px;border:0;border-radius:50%;font-size:0;opacity:.3;background:#fff;position:absolute;z-index:2;left:4px;top:4px}
+.tns-nav button:last-child{display:none}
+.tns-nav-active:before{opacity:1 !important}
 #layout p del{line-height:0;font-size:20px;text-decoration:none}
 #layout .deux-tiers--un-tiers:nth-child(1) .deux-tiers__paragraph:first-of-type:first-letter ,#layout .deux-tiers--un-tiers:nth-child(2) .deux-tiers__paragraph:first-of-type:first-letter {float:left;font-family:"dm_sans",sans-serif;color:#ffbc00;font-weight:900;font-size:5.7em;margin-top:7px;margin-right:.20em;line-height:90%}
 #realated .post p{width:100%}

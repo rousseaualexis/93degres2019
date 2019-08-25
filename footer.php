@@ -68,6 +68,7 @@
     <script src="<?php bloginfo('template_url') ?>/assets/js/TweenMax.min.js"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/lining.js" type="text/javascript"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_url') ?>/assets/js/tiny-slider.js" type="text/javascript"></script>
 
     <script src="<?php bloginfo('template_url') ?>/assets/js/smoothscroll.js"></script>
 <!--

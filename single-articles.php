@@ -30,8 +30,7 @@
     <div id="summary" class="col-xs-42 col-xs-offset-3 col-md-28 col-md-offset-10"><?php echo get_field('introduction');?></div>
 </div>
 
-
-<div id="single--content" class="content row">
+<div id="single--content">
     <?php
     while ( have_posts() ) : the_post();
         the_content(
@@ -46,4 +45,20 @@
 </div>
 
 <?php get_footer(); ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+<script>
+
+
+    var slider = tns({
+    container: '.my-slider',
+    items: 1,
+    loop: false,
+    autoWidth: true,
+    mouseDrag: true,
+    swipeAngle: false,
+    navPosition: "bottom",
+    speed: 600
+  });
+
+</script>
 <?php include'end.php'; ?>  
