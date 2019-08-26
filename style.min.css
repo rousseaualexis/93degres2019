@@ -295,7 +295,8 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 #single--introduction__thumbnail{float:right;margin-top:-5vw;z-index:-1}
 .main-carousel{-webkit-padding-start:0;padding-inline-start:0;-webkit-transition:all 1s cubic-bezier(0.2,0.2,0.1,1) !important;transition:all 1s cubic-bezier(0.2,0.2,0.1,1) !important}
 .main-carousel:focus{outline:0}
-.carousel-cell{vertical-align:middle !important;margin-left:3.5714285715vw;margin-right:3.5714285715vw;display:inline-block}
+.flickity-viewport{-webkit-transform:translateY(50%);transform:translateY(50%)}
+.carousel-cell{margin-left:3.5714285715vw;margin-right:3.5714285715vw;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 .carousel-cell img{max-width:100vh;max-height:80vh;width:auto !important;height:auto}
 #layout p del{line-height:0;font-size:20px;text-decoration:none}
 #layout .deux-tiers--un-tiers:nth-child(1) .deux-tiers__paragraph:first-of-type:first-letter ,#layout .deux-tiers--un-tiers:nth-child(2) .deux-tiers__paragraph:first-of-type:first-letter {float:left;font-family:"dm_sans",sans-serif;color:#ffbc00;font-weight:900;font-size:5.7em;margin-top:7px;margin-right:.20em;line-height:90%}
