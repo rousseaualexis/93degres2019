@@ -49,6 +49,17 @@
 <script>
 
 
+    var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'center',
+  freeScroll: true,
+  lazyLoad: 3,
+  percentPosition: false
+});
+
+/*
+
     var slider = tns({
     container: '.my-slider',
     items: 1,
@@ -59,6 +70,7 @@
     navPosition: "bottom",
     speed: 600
   });
+*/
 
 </script>
 <?php include'end.php'; ?>  

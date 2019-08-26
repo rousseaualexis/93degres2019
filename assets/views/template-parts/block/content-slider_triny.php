@@ -12,15 +12,15 @@ $images = get_field('gallery');
 if( $images ):
 ?>
 <div class="acf--slider content row">
-	<ul class="main-carousel">
+	<ul class="my-slider">
 	        <!-- Slides -->
 	    <?php foreach( $images as $image ): ?>
-	        <li class="carousel-cell">
-	        	<img data-flickity-lazyload="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+	        <li class="slide">
+	        	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
 	        	<span class="h5 caption"><?php the_field('caption'); ?></span>
 	    	</li>
 	    <?php endforeach; ?>
-	   <!-- <li class="slide--ghost"></li> !-->
+	    <li class="slide--ghost"></li>
 	</ul>
 </div>
 <?php endif; ?>
