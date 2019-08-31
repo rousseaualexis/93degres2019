@@ -36,7 +36,7 @@ Template Name: Homepage
                     }
                 ?>
                 
-                <div class="h1 col-xs-offset-1 col-xs-12" data-lining><?php the_title(); ?></div>
+                <div class="h1 col-xs-offset-1 col-xs-16" data-lining><?php the_title(); ?></div>
                 <?php 
                     $thumbnail = get_field( 'thumbnail' );
                     $thumbnail_url = $thumbnail['sizes']['large'];
@@ -48,7 +48,7 @@ Template Name: Homepage
                     <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
                 </div>
 
-                <div id="homepage--cover--image" class="item col-xs-14 col-sm-9">
+                <div id="homepage--cover--image" class="item col-xs-18 col-sm-12">
                     <div class="item__img-wrap image--21-9">
                     <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                     </div></div>
@@ -67,7 +67,7 @@ Template Name: Homepage
             </div>
 
             <div id="more_articles" class="row">
-                <div class="col-xs-12 col-xs-offset-1 col-md-10 col-md-offset-2">
+                <div class="col-xs-16 col-xs-offset-1">
                     <span class="h2">Envie de voir plus d’articles ?</span>
                     <div class="cta--circle">
                         <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
@@ -77,7 +77,7 @@ Template Name: Homepage
 
 
             <div class="row homepage--destinations">
-                    <span class="h4 col-xs-10 col-xs-offset-2">Nos destinations préférées</span>
+                    <span class="h4 col-xs-16 col-xs-offset-1">Nos destinations préférées</span>
                     <?php
                         $cat = get_query_var('cat');
                         $args = array(
@@ -94,7 +94,7 @@ Template Name: Homepage
                             $categories = get_categories($args); ?>
             
                                     
-                    <ul class="col-xs-14">
+                    <ul class="col-xs-18">
                            <?php foreach($categories as $category) {
                             $thumbnail = get_field('paper_flag', $category);
                                     $thumbnail_url = $thumbnail['sizes']['large'];
@@ -108,8 +108,8 @@ Template Name: Homepage
             </div>
             
             <div id="about" class="row">
-                    <span class="h4 col-xs-12 col-xs-offset-1 col-sm-4 col-sm-offset-1">Nos destinations préférées</span>
-                    <span class="h2 col-xs-12 col-xs-offset-1 col-sm-8 col-sm-offset-0">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
+                    <span class="h4 col-xs-16 col-xs-offset-1 col-sm-5 col-sm-offset-1">À propos</span>
+                    <span class="h2 col-xs-16 col-xs-offset-1 col-sm-10 col-sm-offset-1">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
             </div>
  
 </div>

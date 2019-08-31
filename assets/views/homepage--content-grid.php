@@ -1,5 +1,5 @@
 <?php if ('articles' === get_post_type()): ?>
-    <div class="item push-article col-xs-12 col-xs-offset-1 col-sm-5 col-sm-offset-2">
+    <div class="item push-article col-xs-16 col-xs-offset-1 col-sm-7 col-sm-offset-2">
             <?php
                 $thumbnail = get_field('thumbnail');
                 $thumbnail_url = $thumbnail['sizes']['large'];
