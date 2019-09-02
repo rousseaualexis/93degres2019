@@ -1,6 +1,9 @@
 <?php include'head.php'; ?>
 <body class="page--single">
     <main>
+        <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
 <div data-scroll>
 <?php get_header(); ?>
 <div class="container">
@@ -46,6 +49,15 @@
 <?php get_footer(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 <script>
+
+    window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 
     var elem = document.querySelector('.main-carousel');

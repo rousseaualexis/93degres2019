@@ -667,6 +667,16 @@ function my_acf_init() {
       'icon'        => 'format-image',
       'keywords'      => array( 'image', 'full', 'picture' ),
     ));
+    // register Image Full Split block
+    acf_register_block(array(
+      'name'        => 'image-full-split',
+      'title'       => __('Image Full Split'),
+      'description'   => __('A custom Image full Split block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'full', 'picture', 'split' ),
+    ));
     // register Deux tiers un tiers block
     acf_register_block(array(
       'name'        => 'image-deux-tiers-un-tiers',

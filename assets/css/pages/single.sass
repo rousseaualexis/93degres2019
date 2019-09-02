@@ -9,6 +9,12 @@
 .acf--image-full
 	.caption
 		margin-left: 20px
+.acf--image-un-tiers-deux-tiers, .acf--image-deux-tiers-un-tiers
+	font-size: 0
+	div
+		display: inline-block
+		vertical-align: middle
+		float: none
 #single
 
 
@@ -37,6 +43,18 @@
 			z-index: -1
 			+media-sm-and-less
 
+.progress-container
+	position: fixed
+	width: 100%
+	height: 5px
+	top: 0
+	z-index: 1000
+
+.progress-bar 
+	height: 5px
+	background: $color-93degres
+	width: 0%
+
 
 
 .main-carousel
@@ -47,10 +65,46 @@
 	&:focus
       	outline: none
 	
+	&:hover
+		.previous
+			left: 0
+		.next
+			right: 0
+
+.flickity-button
+	width: 75px
+	height: 75px
+	background: $color-black
+	border-radius: 0
+	transition: all 0.5s cubic-bezier(0.2, 0.2, 0.1, 1) !important
+
+	&-icon
+		width: 10px !important
+		height: 10px !important
+		fill: $color-white
+		
+	&:hover, &:active
+		background: $color-black
+		opacity: 1
+
+	&.previous
+		left: -75px
+	&.next
+		right: -75px
+
+	&:disabled
+		opacity: 1
+		visibility: hidden
+		&.previous
+			left: -75px
+		&.next
+			right: -75px
+	
+	
 .carousel-cell
 
-	margin-left: 3.5714285715vw
-	margin-right: 3.5714285715vw
+	margin-left: (1 / $grid-columns * 50%)
+	margin-right: (1 / $grid-columns * 50%)
 	top: 50%
 	transform: translateY(-50%)
 
@@ -61,6 +115,15 @@
 
 		width: auto !important
 		height: auto
+
+
+.flickity-page-dots
+	.dot
+		background: $color-white
+		width: 6px
+		height: 6px
+		margin: 0 10px
+
 
 
 #layout
