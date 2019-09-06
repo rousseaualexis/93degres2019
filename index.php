@@ -6,8 +6,9 @@ Template Name: Homepage
 <?php include'head.php'; ?>
 <body class="page--homepage">
 <main> 
-<?php get_header(); ?>
+
 <div data-scroll>
+    <?php get_header(); ?>
 <div class="container">
     <?php
     $args = array(

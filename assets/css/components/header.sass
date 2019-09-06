@@ -2,21 +2,21 @@ header
 	display: block
 	position: relative
 	z-index: 99
-	height: 100px
+	margin-top: $desktop-margin
+	margin-bottom: $desktop-margin
 
 	+media-sm-and-less
 		height: $header-height
 		margin-top: 0
 
 	#logo
-		margin-top:
 		z-index: 2
 		text-align: center
 
 		+media-sm-and-less
 			margin-top: 25px
-	img 
-		width: 70px
+		img 
+			width: 100%
 
 
 .menu-principal-container, .menu-secondary-container
@@ -44,17 +44,19 @@ header
 		display: inline-block
 		padding: 0
 		margin: auto
-		overflow: hidden
 
 		+media-sm-and-less
 			display: table-cell
 			vertical-align: middle
 
 	li 
-		margin: 0px 10px 0 10px
+		margin-right: $desktop-margin
 		padding: 0
 		display: inline-block
 		vertical-align: middle
+
+		&:last-child
+			margin-right: 0
 
 
 
@@ -65,26 +67,37 @@ header
 
 
 	a 
-		padding: 12px 10px 12px 10px
 		color: $color-white
 		cursor: pointer
-		font-weight: normal
-		display: block
-		transition: all .45s cubic-bezier(.4,0,0,1)
-		backface-visibility: hidden
-
-		&:hover
-			text-decoration: underline
+		@include a-hover
 
 
 
 	#link--instagram
-		background-image: url(assets/img/logo--instagram.svg)
+		background-image: url(assets/img/logo--instagram_gradient.png)
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
 		width: 20px
 		height: 20px
+		display: block
+		overflow: visible
+		margin-left: 15px
+
+
+		&:before
+			content: ""
+			border-radius: 50%
+			background: $color-white
+			position: absolute
+			width: 100%
+			height: 100%
+			padding: 15px
+			top: -15px
+			left: -15px
+			z-index: -1
+
+
 
 		+media-sm-and-less
 			position: relative

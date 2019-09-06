@@ -16,7 +16,7 @@
             wp_nav_menu( $args ); ?>
         </div>
         <div id="logo" class="col-xs-2">
-            <a href="<?php echo get_bloginfo( 'wpurl' );?>"><img src="<?php bloginfo('template_url') ?>/assets/img/logo_2.svg" alt="93degres"/></a>
+            <a href="<?php echo get_bloginfo( 'wpurl' );?>"><img src="<?php bloginfo('template_url') ?>/assets/img/logo.svg" alt="93degres"/></a>
         </div>
         <div class="menu-secondary-container col-xs-7">
             <ul>

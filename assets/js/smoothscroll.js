@@ -152,7 +152,12 @@ function SmoothScroll () {
         }
         layout() {
             // translates the scrollable element
-            this.DOM.scrollable.style.transform = `translate3d(0,${-1*this.renderedStyles.translationY.previous}px,0)`;
+            if (this.renderedStyles.translationY.previous > 0.05){
+                this.DOM.scrollable.style.transform = `translate3d(0,${-1*this.renderedStyles.translationY.previous}px,0)`;
+            }
+            else{
+            
+            }
         }
         setSize() {
             // set the heigh of the body in order to keep the scrollbar on the page
