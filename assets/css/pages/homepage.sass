@@ -25,6 +25,8 @@
 
 	.h1
 		margin-bottom: $desktop-margin
+		z-index: 1
+		pointer-events: none
 		+media-sm-and-less
 			margin-bottom: $mobile-margin
 			margin-top: -5vw
@@ -52,9 +54,12 @@
 	&--image
 
 		float: right
-		z-index: -1
 		padding-right: 0
 		margin-top: $desktop-margin* -3
+
+		&:hover
+			.item__img
+				opacity: 0.25
 
 		+media-sm-and-less
 	
@@ -64,12 +69,13 @@
 			right: 0
 			top: 0
 
+		.item__img
+			transition: opacity 0.45s cubic-bezier(0.4, 0, 0, 1)
+
 		.image--21-9
 			+media-sm-and-less
 				padding-bottom: 66.66%
 
-		.image
-			position: relative
 
 
 

@@ -216,7 +216,8 @@ header #logo img{width:100%}
 .menu-principal-container a:after,.menu-secondary-container a:after{content:'';position:absolute;width:100%;height:2px;bottom:-5px;left:0;-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:right;transform-origin:right;background:#fff;-webkit-transition:-webkit-transform .35s cubic-bezier(0.4,0,0,1);transition:-webkit-transform .35s cubic-bezier(0.4,0,0,1);transition:transform .35s cubic-bezier(0.4,0,0,1);transition:transform .35s cubic-bezier(0.4,0,0,1),-webkit-transform .35s cubic-bezier(0.4,0,0,1)}
 .menu-principal-container a:hover:after,.menu-secondary-container a:hover:after{-webkit-transform:none;transform:none;-webkit-transform-origin:left;transform-origin:left}
 .menu-principal-container #link--instagram,.menu-secondary-container #link--instagram{background-image:url(assets/img/logo--instagram_gradient.png);background-size:contain;background-repeat:no-repeat;background-position:center;width:20px;height:20px;display:block;overflow:visible;margin-left:15px}
-.menu-principal-container #link--instagram:before,.menu-secondary-container #link--instagram:before{content:"";border-radius:50%;background:#fff;position:absolute;width:100%;height:100%;padding:15px;top:-15px;left:-15px;z-index:-1}
+.menu-principal-container #link--instagram:hover:before,.menu-secondary-container #link--instagram:hover:before{-webkit-transform:scale(1.35);transform:scale(1.35)}
+.menu-principal-container #link--instagram:before,.menu-secondary-container #link--instagram:before{content:"";border-radius:50%;background:#fff;position:absolute;width:100%;height:100%;padding:15px;top:-15px;left:-15px;z-index:-1;-webkit-transition:-webkit-transform .35s cubic-bezier(0.4,0,0,1);transition:-webkit-transform .35s cubic-bezier(0.4,0,0,1);transition:transform .35s cubic-bezier(0.4,0,0,1);transition:transform .35s cubic-bezier(0.4,0,0,1),-webkit-transform .35s cubic-bezier(0.4,0,0,1)}
 .menu-principal-container .current,.menu-secondary-container .current{color:#fff;background:#202227}
 .menu-secondary-container{text-align:right}
 .mobile-menu{overflow:hidden;width:25px;height:27px;cursor:pointer;position:fixed;right:4.16%;z-index:110;margin-top:40px;display:none}
@@ -337,12 +338,13 @@ button:focus{outline:0;background:rgba(0,0,0,0.05)}
 #homepage--cover{margin-top:100px}
 #homepage--cover .categories{float:left;clear:both;margin-bottom:25px;position:relative;padding-left:5px}
 #homepage--cover .cta--circle{float:left;clear:both;position:relative;padding-left:5px}
-#homepage--cover .h1{margin-bottom:50px}
+#homepage--cover .h1{margin-bottom:50px;z-index:1;pointer-events:none}
 #homepage--cover .h1 [index="2"]{margin-left:11.1111111111%}
 #homepage--cover .h1 [index="3"]{margin-left:5.5555555556%}
 #homepage--cover .h1 strong{color:#ffbc00}
-#homepage--cover--image{float:right;z-index:-1;padding-right:0;margin-top:-150px}
-#homepage--cover--image .image{position:relative}
+#homepage--cover--image{float:right;padding-right:0;margin-top:-150px}
+#homepage--cover--image:hover .item__img{opacity:.25}
+#homepage--cover--image .item__img{-webkit-transition:opacity .45s cubic-bezier(0.4,0,0,1);transition:opacity .45s cubic-bezier(0.4,0,0,1)}
 #h1--seo{float:right;margin-right:15px;text-align:right;width:100%}
 #h1--seo h1{font-family:"dm_sans",sans-serif;font-weight:400;font-size:14px;color:rgba(255,255,255,0.5)}
 #other_articles{margin-bottom:0}
