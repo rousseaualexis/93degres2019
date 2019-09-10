@@ -5,6 +5,7 @@
             $args = array(
             'depth'       => 0,
             'sort_column' => 'menu_order',
+            'theme_location' => 'nav-menu',
             'menu_class'  => 'menu',
             'include'     => '',
             'exclude'     => '',
@@ -14,6 +15,7 @@
             'link_after'  => ''
             );
             wp_nav_menu( $args ); ?>
+
         </div>
         <div id="logo" class="col-xs-2">
             <a href="<?php echo get_bloginfo( 'wpurl' );?>"><img src="<?php bloginfo('template_url') ?>/assets/img/logo.svg" alt="93degres"/></a>

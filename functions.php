@@ -616,6 +616,15 @@ function jdn_post_type_terms_clauses( $clauses, $taxonomy, $args ) {
  return $clauses;
 }
 
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer-menu' => __( 'Footer Menu' ),
+      'nav-menu' => __( 'Nav Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
 
 
 /*--------------------------------------------------------------------------------

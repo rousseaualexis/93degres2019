@@ -25,10 +25,11 @@
         <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="big_title">93° Degrés</a>
     </div>
     <div class="col-xs-8 col-xs-offset-1">
-            <?php 
+        <?php 
             $args = array(
             'depth'       => 0,
             'sort_column' => 'menu_order',
+            'theme_location' => 'footer-menu',
             'menu_class'  => 'menu',
             'include'     => '',
             'exclude'     => '',
