@@ -44,7 +44,7 @@ Template Name: Homepage
                 ?>
               
                 
-                <div class="categories col-xs-offset-1"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_date('d.m.Y'); ?></span></div>
+                <div class="categories col-xs-offset-1"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
                 <div class="cta--circle col-xs-offset-1">
                     <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
                 </div>
@@ -108,7 +108,7 @@ Template Name: Homepage
             </div>
             
             <div id="about" class="row">
-                    <span class="h4 col-xs-16 col-xs-offset-1 col-sm-5 col-sm-offset-1">À propos</span>
+                    <span class="h4 col-xs-16 col-xs-offset-1 col-sm-4 col-sm-offset-2">À propos</span>
                     <span class="h2 col-xs-16 col-xs-offset-1 col-sm-10 col-sm-offset-1">Nous sommes <strong>Agathe & Alexis</strong>, deux directeurs artistiques parisiens, passionnés de voyage, de design et de photographie.</span>
             </div>
  

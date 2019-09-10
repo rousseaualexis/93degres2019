@@ -373,7 +373,7 @@ if( is_admin() ) add_filter('tiny_mce_before_init', 'tinymce_paste_options');
       add_filter('comment_form_defaults', 'wpsites_modify_text_before_comment_form');
 
 
-/*
+
 // DELETE CATEGORY MARK such as category:
 // Remove the Category: prefix from category archive titles
 // Return an alternate title, without prefix, for every type used in the get_the_archive_title().
@@ -421,7 +421,7 @@ add_filter('get_the_archive_title', function ($title) {
 });
 
 
-*/
+
 
 
 

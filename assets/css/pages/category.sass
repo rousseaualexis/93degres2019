@@ -1,163 +1,35 @@
-.destinations
-	.grid
-		margin-top: ($desktop-margin / 2)
-
-#cover-categorie
-	height: 65%
-	margin-bottom: ($desktop-margin / 2)
-	+media-sm-and-less
-		margin-bottom: $mobile-margin
-		margin-top: 120px
-		height: 55%
-
-	#cover-container
-		height: 100%
+#categorie--cover
+	.h1
 		text-align: center
-		color: #ffffff
-
-		.cover-image
-			z-index: -1
-			top: 0
-			bottom: 0
-			left: 0
-			right: 0
-			position: absolute
-			background-size: cover
-			background-position: center
-
-		.table
-			z-index: 2
-			position: relative
-
-		.country-code
-			height: 100%
-			width: 100%
-			position: absolute
-			top: 0
-			z-index: 0
-
-			div
-				height: 100%
-				width: 100%
-				position: relative
-
-				h5
-					z-index: 2
-					color: $color-white
-
-					position: relative
-					top: 52.5%
-					line-height: 0
-					font-size: 65vh
-					padding-right: 23vw
-					opacity: 0.2
-
-	h1, h2
-		color: #ffffff
-	
-	.cover-gradient
-		z-index: -1
-
-#why-we-like 
-	padding-top: $desktop-margin
-	padding-bottom: $desktop-margin
-	background: $color-base-light
-	text-align: center
-
-	&__content
-		z-index: 2
-		position: relative
-
-		h4
-			display: inline-block
-			letter-spacing: 0.4em
-			padding: 20px 0
-			margin-bottom: ($desktop-margin / 2)
-			position: relative
-
-			&:before, &:after
-				content: ""
-				position: absolute
-				margin-left: 50%
-				left: -12px
-				width: 25px
-				height: 4px
-				background: $color-93degres
-
-			&:before
-				top: 0
-
-			&:after
-				bottom: 0
 
 
-		h3 
-			text-align: center
-			font-size: 45px
-			line-height: 60px
+				
+.categorie--articles
 
-	.stamp
-		position: absolute
-		top: -20px
-		left: 55%
-		width: 20%
+	margin-bottom: 0
 
-		img
-			width: 100%
-			z-index: 0
-			opacity: 0.3
-			position: absolute
-
-
-
-#what-we-like
-	text-align: center
-
-	h4
+	.push-article
+		margin-bottom: $desktop-margin * 2
 		display: inline-block
-		letter-spacing: 0.4em
-		padding: 20px 0
-		margin-bottom: 4.16%
-		position: relative
+		float: none
+		vertical-align: top
 
-		&:before, &:after
-			content: ""
-			position: absolute
-			margin-left: 50%
-			left: -12px
-			width: 25px
-			height: 4px
-			background: $color-93degres
+		+media-sm-and-less
+			margin-bottom: $mobile-margin * 2
 
-		&:before
-			top: 0
-
-		&:after
-			bottom: 0
-
-	&__content
-		right: 1.04%
-
-		h3 	
-			font-weight: 400
-			bottom: 15%
-			position: absolute
-			width: 80%
-			left: 10%
-			color: $color-white
-			font-size: 28px
-			line-height: 30px
-			z-index: 1
+		.item__img
+			transition: opacity 0.45s cubic-bezier(0.4, 0, 0, 1)
+		a
 
 
-.favorite-place
-	display: inline-block
-	float: none
-	padding-bottom: 33%
+			&:hover
+				.item__img
+					opacity: 0.25
 
-	.image
-		position: absolute
-		height: 100%
-		display: block
-	
-	
+		.categories
+			margin-top: $desktop-margin
+			margin-bottom: $desktop-margin / 4
+
+			+media-sm-and-less
+				margin-top: $mobile-margin
+				margin-bottom: $mobile-margin / 2
