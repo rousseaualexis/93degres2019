@@ -1,7 +1,7 @@
  
 
 <div id="footer" class="content row">
-    <div id="list-destinations" class="col-xs-18">
+    <div id="list-destinations" class="col-xs-24">
             <?php
                 $taxonomy = 'category';
                 $args = array(
@@ -21,10 +21,10 @@
                 } }
             ?>   
     </div>
-    <div class="col-xs-18">
+    <div class="col-xs-24">
         <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="big_title">93° Degrés</a>
     </div>
-    <div class="col-xs-8 col-xs-offset-1">
+    <div class="col-xs-10 col-xs-offset-2">
         <?php 
             $args = array(
             'depth'       => 0,
@@ -40,7 +40,7 @@
             );
             wp_nav_menu( $args ); ?>
     </div>
-    <div id="copyright" class="col-xs-8">
+    <div id="copyright" class="col-xs-10">
         <p> ©93.Degrés – by Alexis & Agathe</p>
     </div>
     

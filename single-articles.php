@@ -22,15 +22,14 @@
 ?>
 
 <div id="single--introduction" class="content row">
-    <div class="categories col-xs-offset-1"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
-    <h1 class="h1 col-xs-16 col-xs-offset-1" data-lining><?php the_title(); ?></h1>
-    <div id="single--introduction__thumbnail" class="item col-xs-18">
+    <div class="categories col-xs-offset-2"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
+    <h1 class="h1 col-xs-20 col-xs-offset-2" data-lining><?php the_title(); ?></h1>
+    <div id="single--introduction__thumbnail" class="item col-xs-24">
         <div class="item__img-wrap image--21-9">
             <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
             </div>
         </div>
     </div>
-    <div id="summary" class="col-xs-42 col-xs-offset-3 col-md-28 col-md-offset-10"><?php echo get_field('introduction');?></div>
 </div>
 
 <div id="single--content">

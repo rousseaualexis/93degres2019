@@ -9,14 +9,15 @@
 $deux_tiers = get_field('image-deux-tiers');
 $un_tiers = get_field('image-un-tiers');
 
+
 ?>
-<div class="acf--image-un-tiers-deux-tiers content row">
-	<div class="col-sm-5 col-sm-offset-1">
-        <img src="<?php echo $un_tiers['url']; ?>" alt="<?php echo $un_tiers['alt']; ?>" />
-        <span class="h5 caption"><?php the_field('caption-un-tiers'); ?></span>
-	</div>
-	<div class="col-sm-9 col-sm-offset-1">
+<div class="acf--image-deux-tiers-un-tiers content row">
+	<div class="col-xs-15 col-xs-offset-0">
         <img src="<?php echo $deux_tiers['url']; ?>" alt="<?php echo $deux_tiers['alt']; ?>" />
         <span class="h5 caption"><?php the_field('caption-deux-tiers'); ?></span>
+	</div>
+	<div class="col-xs-6 col-xs-offset-1">
+        <img src="<?php echo $un_tiers['url']; ?>" alt="<?php echo $un_tiers['alt']; ?>" />
+        <span class="h5 caption"><?php the_field('caption-un-tiers'); ?></span>
 	</div>
 </div>

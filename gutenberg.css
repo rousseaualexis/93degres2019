@@ -1,5 +1,14 @@
-.wp-block{
-	max-width: 75%;
+
+.acf-block-preview h2{
+	font-family: serif;
+	font-size: 34px;
+	line-height: 48px;
+}
+
+.acf--separator {
+	background: #f5f5f5;
+	height: 50px;
+
 }
 .acf--testimonial blockquote{
 	width: 100%;
@@ -7,9 +16,10 @@
 	margin: 0;
 }
 
-.acf--testimonial blockquote p{
-	margin: 0;
-	margin-bottom: 20px
+.acf--big-title {
+	font-family: serif;
+	font-size: 34px;
+
 }
 
 .acf--testimonial img{

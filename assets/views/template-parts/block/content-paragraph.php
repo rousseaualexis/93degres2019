@@ -11,10 +11,10 @@ $paragraph = get_field('paragraph');
 
 ?>
 <div class="acf--paragraph content row">
-	<div class="col-sm-5 col-sm-offset-1">
+	<div class="col-sm-6 col-sm-offset-2">
 		<p class="h5"><?php echo $small_description; ?></p>
 	</div>
-	<div class="col-sm-9 col-sm-offset-1">
+	<div class="col-sm-11 col-sm-offset-1">
         <?php echo $paragraph; ?>
 	</div>
 </div>

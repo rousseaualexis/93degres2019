@@ -688,23 +688,13 @@ function my_acf_init() {
     ));
     // register Deux tiers un tiers block
     acf_register_block(array(
-      'name'        => 'image-deux-tiers-un-tiers',
-      'title'       => __('Image Deux Tiers / Un Tiers'),
+      'name'        => 'image-deux-tiers-',
+      'title'       => __('Image Deux Tiers'),
       'description'   => __('A custom image block.'),
       'render_callback' => 'my_acf_block_render_callback',
       'category'      => 'formatting',
       'icon'        => 'format-image',
-      'keywords'      => array( 'image', 'deux tiers', 'un tiers' ),
-    ));
-    // register Un tiers Deux tiers block
-    acf_register_block(array(
-      'name'        => 'image-un-tiers-deux-tiers',
-      'title'       => __('Image Un Tiers / Deux Tiers'),
-      'description'   => __('A custom image block.'),
-      'render_callback' => 'my_acf_block_render_callback',
-      'category'      => 'formatting',
-      'icon'        => 'format-image',
-      'keywords'      => array( 'image', 'deux tiers', 'un tiers' ),
+      'keywords'      => array( 'image', 'deux tiers'),
     ));
     // register One Image block
     acf_register_block(array(
@@ -715,6 +705,26 @@ function my_acf_init() {
       'category'      => 'formatting',
       'icon'        => 'format-image',
       'keywords'      => array( 'image', 'one', 'one image' ),
+    ));
+    // register Two Image block
+    acf_register_block(array(
+      'name'        => 'image-two',
+      'title'       => __('Two Image'),
+      'description'   => __('A custom Image block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'two', 'two image' ),
+    ));
+    // register Three Image block
+    acf_register_block(array(
+      'name'        => 'image-three',
+      'title'       => __('Three Image'),
+      'description'   => __('A custom Image block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'image', 'three', 'three image' ),
     ));
     // register Paragraph block
     acf_register_block(array(
@@ -745,6 +755,16 @@ function my_acf_init() {
       'category'      => 'formatting',
       'icon'        => 'format-image',
       'keywords'      => array( 'Slider', 'Gallery' ),
+    ));
+    // register Separator block
+    acf_register_block(array(
+      'name'        => 'separator',
+      'title'       => __('Separator'),
+      'description'   => __('A custom Separator block.'),
+      'render_callback' => 'my_acf_block_render_callback',
+      'category'      => 'formatting',
+      'icon'        => 'format-image',
+      'keywords'      => array( 'separator'),
     ));
   }
 }
