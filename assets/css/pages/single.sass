@@ -6,21 +6,25 @@
 
 		margin-top: $desktop-margin * 2
 
+.acf
+	&--image-full
+		.caption
+			margin-left: 20px
 
-.acf--image-full
-	.caption
-		margin-left: 20px
+	&--separator
+		margin-bottom: -$desktop-margin !important
 
-.acf--separator
-	margin-bottom: -$desktop-margin !important
-.acf--title
-	margin-bottom: 0 !important
-	h2
-		margin-bottom: $desktop-margin
-.acf--paragraph
+	&--title
+		margin-bottom: 0 !important
+		h2
+			margin-bottom: $desktop-margin
+	&--paragraph
 
-	p
-		margin-bottom: $desktop-margin
+		p
+			margin-bottom: $desktop-margin
+
+			&:last-child
+				margin-bottom: 0
 
 
 
@@ -33,9 +37,6 @@
 		img
 			width: 100%
 
-
-		p
-			margin: auto
 
 
 	&--introduction
