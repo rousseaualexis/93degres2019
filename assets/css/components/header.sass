@@ -8,6 +8,7 @@ header
 	+media-sm-and-less
 		height: $header-height
 		margin-top: 0
+		
 
 	#logo
 		z-index: 2
@@ -21,7 +22,7 @@ header
 
 			+media-sm-and-less
 				max-width: auto
-
+				min-width: 100px
 
 .menu-header-container, .menu-secondary-container
 	
@@ -132,9 +133,9 @@ header
 	height: 27px
 	cursor: pointer
 	position: fixed
-	right: 4.16%
+	@include make-xs-column-pull(2)
 	z-index: 110
-	margin-top: 40px
+	margin-top: 25px
 	display: none
 
 	+media-sm-and-less
