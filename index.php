@@ -97,10 +97,9 @@ Template Name: Homepage
                     <ul class="col-xs-24">
                            <?php foreach($categories as $category) {
                             $thumbnail = get_field('paper_flag', $category);
-                                    $thumbnail_url = $thumbnail['sizes']['large'];
                                 ?>
                                 <a href="<?php echo get_category_link( $category->term_id ); ?> " class="big_title homepage--destinations--names menu__link"> <?php echo $category->name; ?>
-                                     <div class="homepage--destinations--image__container"><div class="homepage--destinations--image" style="background-image: url(<?php echo $thumbnail_url; ?>);"></div></div>
+                                     <div class="homepage--destinations--image__container"><div class="homepage--destinations--image" style="background-image: url(<?php echo $thumbnail['url']; ?>);"></div></div>
                                 </a>
                         <?php } ?>
                     </ul>

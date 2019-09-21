@@ -194,9 +194,7 @@
 			-webkit-text-fill-color: transparent /* Will override color (regardless of order) */
 
 			.homepage--destinations--image
-		        transform: none
-		        transform-origin: left
-			
+		        opacity: 1
 	&--image
 
 		position: relative
@@ -205,9 +203,7 @@
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
-		transform: scaleX(0)
-		transform-origin: right
-		transition: transform 0.35s cubic-bezier(0.4, 0, 0, 1)
+		opacity: 0
 
 
 		&__container
@@ -224,17 +220,7 @@
 
 
 
-.distort
-	width: 40vw
-	height: 60vw
-	position: fixed
-	pointer-events: none
-	will-change: transform
-	left: calc(50% - 20vw)
-	margin-top: calc(50% - 30vw)
 
-	&__img
-		opacity: 0
 
 #about
 	.h4
