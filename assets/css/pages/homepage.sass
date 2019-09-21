@@ -140,7 +140,13 @@
 		&:nth-child(2)
 			float: right
 			margin-left: 0
-			@include make-xs-column-pull(2)
+			@include make-md-column-pull(2)
+
+			+media-sm-and-less
+				float: left
+				@include make-xs-column-offset(1)
+
+
 
 			.item__img-wrap
 				padding-bottom: 100%
@@ -164,11 +170,17 @@
 	text-align: center
 	overflow: hidden
 
+	+media-sm-and-less
+		padding-bottom: $desktop-margin
+
 	.h4
 		text-align: center
 		text-transform: uppercase
 		margin-bottom: $desktop-margin/2
 		padding-top: $desktop-margin * 3
+
+		+media-sm-and-less
+			margin-bottom: $desktop-margin*2
 
 	&::after
 		background: $color-93degres
@@ -181,20 +193,45 @@
 		position: initial
 		z-index: 100
 
+
 		&:nth-child(1n+1)
 			float: right
 			right: -10px
+			+media-sm-and-less
+				float: left
+				width: 100%
+				right: 0
+				left: 0
+				text-align: center
 			
 		&:nth-child(2n)
 			left: -10px
 			float: left
+			+media-sm-and-less
+				float: left
+				width: 100%
+				right: 0
+				left: 0
+				text-align: center
+
+
+		+media-sm-and-less
+			margin-bottom: $desktop-margin*3
 
 		&:hover
 			-webkit-text-stroke: 1px black
 			-webkit-text-fill-color: transparent /* Will override color (regardless of order) */
 
+			+media-sm-and-less
+
+				-webkit-text-stroke: none
+				-webkit-text-fill-color: initial /* Will override color (regardless of order) */
+
+
+
 			.homepage--destinations--image
 		        opacity: 1
+
 	&--image
 
 		position: relative
@@ -205,22 +242,28 @@
 		background-position: center
 		opacity: 0
 
+		+media-sm-and-less
+			opacity: 1
+			float: left
+			display: block
+			height: 40px
+
 
 		&__container
 			position: absolute
-			width: 50%
-			left: 25%
+			width: 100%
+			left: 0%
 			top: 0
 			bottom: 0
 			z-index: -1
 			overflow: hidden
 
-    
-
-
-
-
-
+			+media-sm-and-less
+				position: relative
+				overflow: initial
+				float: left
+				display: block
+				margin-bottom: $desktop-margin
 
 #about
 	.h4

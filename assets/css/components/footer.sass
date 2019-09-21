@@ -16,7 +16,7 @@
 		padding-bottom: ($desktop-margin / 2)
 		border-bottom: solid 1px rgba($color-white, 0.25)
 		left: -5px
-		
+
 		span
 			font-size: 20px
 			font-family: $dm_sans
@@ -29,6 +29,10 @@
 			margin-left: 20px
 			margin-right: 20px
 			@include a-hover
+			+media-sm-and-less
+				float: left
+				@include make-xs-column-offset(1)
+				margin-right: 0
 
 
 	.menu-footer-container

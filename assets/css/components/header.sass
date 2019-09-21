@@ -19,6 +19,9 @@ header
 			width: 100%
 			max-width: 125px
 
+			+media-sm-and-less
+				max-width: auto
+
 
 .menu-header-container, .menu-secondary-container
 	
@@ -145,7 +148,7 @@ header
 		position: relative
 
 .mobile-menu span, .mobile-menu span:after, .mobile-menu span:before
-	background: #000
+	background: $color-white
 	border-radius: 5px
 
 .mobile-menu span:after, .mobile-menu span:before
