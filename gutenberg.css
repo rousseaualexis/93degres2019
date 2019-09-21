@@ -57,22 +57,17 @@
 	float: left;
 }
 
-.acf--testimonial blockquote{
-	width: 100%;
-	padding: 25px;
-	margin: 0;
-}
 
-.acf--big-title .h2{
+.acf-block-preview  .acf--big-title .h2{
 	font-family: serif;
 	font-size: 32px;
 }
 
-.acf--title .h3{
+.acf-block-preview  .acf--title .h3{
 	font-family: serif;
 	font-size: 24px;
 }
-.acf--title .h3 strong{
+.acf-block-preview  .acf--title .h3 strong{
 	font-family: sans-serif;
 	color: #ffbc00;
 }
