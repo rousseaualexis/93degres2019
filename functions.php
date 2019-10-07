@@ -72,7 +72,7 @@ register_post_type(
       'title', 'comments', 'editor'
     ),
     'has_archive' => true,
-      'taxonomies' => array('category'),
+    'taxonomies' => array('category', 'post_tag'),
     'menu_position' => 4,
     'rewrite' => array(
         'slug' => 'articles')
@@ -147,7 +147,7 @@ register_post_type(
 function custom_post_type_cat_filter($query) {
   if ( !is_admin() && $query->is_main_query() ) {
     if ($query->is_category()) {
-      $query->set( 'post_type', array( 'carnets', 'guides', 'conseils' ) );
+      $query->set( 'post_type', array( 'articles', 'guides', 'conseils' ) );
     }
   }
 }
@@ -525,7 +525,7 @@ function pressPagination($pages = '', $range = 2)
        */
       add_action( 'pre_get_posts', 'wpsites_cpt_archive_items' );
       function wpsites_cpt_archive_items( $query ) {
-      if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'carnets' ) ) {
+      if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'articles' ) ) {
               $query->set( 'posts_per_page', '9' );
           }
       if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'guides' ) ) {

@@ -1,7 +1,7 @@
 <?php include'head.php'; ?>
 <body class="page--single">
-    <main>
-        <div class="progress-container">
+<main>
+  <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
 <div data-scroll>

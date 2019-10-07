@@ -1,9 +1,9 @@
 <?php include'head.php'; ?>
 <body class="page--category">
-<main> 
-
+<main>
 <div data-scroll>
-    <?php get_header(); ?>
+<?php get_header(); ?>
+<div class="row container">
 <div class="container">
 <?php
 $term = get_queried_object();
