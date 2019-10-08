@@ -29,13 +29,14 @@ $args = array(
 	
 	$categories = get_categories($args);
 	foreach($categories as $category) { 
-          $thumbnail = get_field('thumbnail', $category);
-          $thumbnail_url = $thumbnail['sizes']['large'];
+
+          $thumbnail = get_field('paper_flag', $category);
+
       ?>
         <div class="col-xs-24">
             <a href=" <?php echo get_category_link( $category->term_id ); ?> " >
-                <h2 class="h1"><?php echo $category->name; ?></h2>
-                <div class="image" style="background-image: url('<?php echo $thumbnail_url; ?>')"></div>
+                <h2 class="big_title"><?php echo $category->name; ?></h2>
+                <div class="image" style="background-image: url('<?php echo $thumbnail['url']; ?>')"></div>
             </a>
         </div>
     
