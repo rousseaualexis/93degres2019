@@ -1,8 +1,8 @@
 <?php include'head.php'; ?>
 <body class="page--category">
 <main>
-<div data-scroll>
 <?php get_header(); ?>
+<div data-scroll>
 <div class="row container">
 <div class="container">
 <?php

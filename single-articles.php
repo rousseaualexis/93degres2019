@@ -4,8 +4,8 @@
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
-<div data-scroll>
 <?php get_header(); ?>
+<div data-scroll>
 <div class="container">
 <?php $thumbnail = get_field('thumbnail');
     if ($thumbnail) :
