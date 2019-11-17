@@ -21,30 +21,28 @@
         }
 ?>
 
-<div id="single--introduction" class="content row">
-    <div class="categories col-xs-offset-2"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
-    <h1 class="h1 col-xs-20 col-xs-offset-2" data-lining><?php the_title(); ?></h1>
-    <div id="single--introduction__thumbnail" class="item col-xs-24">
-        <div class="item__img-wrap image--21-9">
-            <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
-            </div>
-        </div>
-    </div>
+  <div id="single--introduction" class="content row">
+      <div class="categories col-xs-offset-2"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
+      <h1 class="h1 col-xs-20 col-xs-offset-2" data-lining><?php the_title(); ?></h1>
+      <div id="single--introduction__thumbnail" class="item col-xs-24">
+          <div class="item__img-wrap image--21-9">
+              <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="single--content">
+      <?php
+      while ( have_posts() ) : the_post();
+          the_content(
+          );
+      endwhile; // End of the loop.
+      ?>
+  <?php include'assets/views/comments.php'; ?>
+
+  </div>
 </div>
-
-<div id="single--content">
-    <?php
-    while ( have_posts() ) : the_post();
-        the_content(
-        );
-    endwhile; // End of the loop.
-    ?>
-
-<!--<?php include'assets/views/layout-loop.php'; ?> !-->
-<?php include'assets/views/comments.php'; ?>
-
-</div>
-
 <?php get_footer(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 <script>
