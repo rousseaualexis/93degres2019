@@ -13,7 +13,7 @@
                         $term_name = $term->name;
                     }}
             ?>  
-            <a href="<?php the_permalink(); ?>">
+            <a href="<?php the_permalink(); ?>" class="hidden">
                 <div class="item__img-wrap image--3-2">
                 <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                 </div></div>

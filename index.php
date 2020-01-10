@@ -56,7 +56,7 @@ Template Name: Homepage
                 <div id="h1--seo" class="h5"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
             </div>
 
-            <div id="other_articles" class="content row">
+            <div id="other_articles" class="content row scroll-reveal">
     <?php
             else :
                 get_template_part( 'assets/views/homepage--content-grid' );

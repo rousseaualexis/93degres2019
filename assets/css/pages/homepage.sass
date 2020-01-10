@@ -1,5 +1,6 @@
 #homepage--cover
-	
+	overflow: hidden
+
 	+media-sm-and-less
 		position: relative
 		padding-top: 66.66%
@@ -25,6 +26,7 @@
 		margin-bottom: $desktop-margin
 		z-index: 1
 		pointer-events: none
+		overflow: hidden
 		+media-sm-and-less
 			margin-bottom: $mobile-margin
 			margin-top: -5vw
@@ -106,6 +108,7 @@
 	margin-bottom: 0
 
 	.push-article
+		overflow: hidden
 		margin-bottom: $desktop-margin * 2
 
 		+media-sm-and-less
@@ -115,7 +118,7 @@
 			transition: opacity $transition-quick
 		a
 
-
+			display: block
 			&:hover
 				.item__img
 					opacity: 0.25

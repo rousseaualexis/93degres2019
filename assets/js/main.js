@@ -53,10 +53,13 @@ var site = (function() {
      */
     var showPreloader = function() {
 
-        TweenLite.to($(".mask"), 0.8, {y:"-100%", ease:Power2.easeOut, delay:0.75, onComplete:function(){
+        var tl = new TimelineLite();
+
+        tl.staggerTo($(".mask"), 1, {y:"-100%", ease:Expo.easeOut, delay:0.75, onComplete:function(){
         
             $(".mask").remove();
         }});
+        tl.staggerFrom($('header'), 1.5 , {y:'200%', ease:Expo.easeOut}, 0, 1);
 
         setTimeout(function(){
             init();
@@ -86,11 +89,15 @@ var site = (function() {
                 e.preventDefault();  
                 mask = $("<div/>").appendTo("body").addClass("mask");
                 var tl = new TimelineLite();
-                    tl.from(mask, 0.3, {display: "none", top: "100%", onComplete:function(){
+    
+                    tl.staggerFrom(mask, 0.5, {display: "none", top: "100%", ease:Expo.easeOut, onComplete:function(){
                         setTimeout(function(){ 
                             window.location = url;
                         }, 200, url);
-                    }});        
+                    }}, 0, 0.2);
+
+                    tl.staggerTo($('.container'), 2, {y:'-5%', ease:Expo.easeOut}, 0, 0.2);
+                    tl.staggerTo($('header'), 3, {y:'-400%', ease:Expo.easeOut}, 0, 0.2); 
             }
         });
             $("#mobile-menu").on('click', function() {
@@ -131,7 +138,7 @@ var site = (function() {
         MODULES
     ============================================================================== */
 
-    
+    /*
     var navItem = function(){
 
         var $el = $('#header'),
@@ -140,6 +147,8 @@ var site = (function() {
             tl = new TimelineLite();
             tl.staggerFrom($el.find('.wordsplit'), 1.2, {y:'400%', ease:Power4.easeOut}, 0.03, 1);
         }
+
+
 
     var randomize = function(){
         var tl = new TimelineLite();
@@ -152,7 +161,7 @@ var site = (function() {
             tl.to($(this), 0.1, {rotation:degree, y:randomY, x:randomX, ease:Power2.easeOut}, 0.1);
         })
     }
-
+ */
     var scrollReveal = function() {
         //get viewport size
         var windowHeight = $(window).innerHeight(),
@@ -199,21 +208,18 @@ var homepage = (function() {
     
     var init = function() {
         firstPost();
-        $('body').on('reveal', '.scroll-reveal', scrollRevealHandler);
+        /*$('body').on('reveal', '.scroll-reveal', scrollRevealHandler);*/
     }
-
+/*
     var scrollRevealHandler = function(){
         var $el = $(this);
 
         if ($el.hasClass('scroll-reveal--revealed'))
             return;
 
-        if ($el.is('.grid')) {
+        if ($el.is('#other_articles')) {
             tl = new TimelineLite();
-            tl.staggerFrom($el.find('.post .image'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 0.2);
-            tl.staggerFrom($el.find('.post .categories'), 1.8, {alpha:'0', ease:Power4.easeOut}, 0.2, 0.4);
-            tl.staggerFrom($el.find('.post h1'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 0.8);
-            tl.staggerFrom($el.find('.post p'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 1.2);
+            tl.staggerFrom($el.find('.item__img'), 0.8, {backgroundSize:'contain', ease:Expo.easeInOut}, 0.2, 0.4);
         }
 
         else if ($el.is('#destinations h5')) {
@@ -237,21 +243,20 @@ var homepage = (function() {
             tl.staggerFrom($el.find('li'), 1.8, {y:'250%', ease:Power4.easeOut}, 0.12, 0);
         }
     }
-
+*/
     var firstPost = function(){
-        var $el = $('.first-post'),
-            $text = $("#title h1");
+        var $el = $('#homepage--cover'),
+            $text = $("#homepage--cover .h1"),
+            $line = $("#homepage--cover .h1 .line");
         var tl = new TimelineLite();
 
-            tl.staggerFrom($el.find('.country-code h5'), 1.8, { alpha:'0', ease: Power4.easeOut}, 0.2, '+=0.8');
-            tl.from($el.find('.first-post-image .image'), 1.8, {y:'200%', ease:Power4.easeOut}, '-=1.6');
-            tl.from($el.find('.categories img'), 0.6, {y:'300%', ease:Power2.easeOut}, '-=1.2');
-            tl.staggerFrom($el.find('.categories .wordsplit'), 0.6, {y:'300%', ease:Power2.easeOut}, 0.1, '-=1.1');
-            tl.staggerFrom($el.find('h1 .charsplit'), 1.2, {y:'150%', ease:Power4.easeOut}, 0.01, '-=1');
-            tl.from($el.find('strong'), 0.8, {left:'-120%', ease:Power4.easeOut}, '-=0.8');
-            tl.from($el.find('.a-cta'), 1, {opacity:0, y:'300', ease:Power4.easeOut}, '-=1');
-            tl.from($el.find('.trait'), 1.2, {scaleX:'0', transformOrigin:"left", ease:Power4.easeOut}, '-=1');
-            tl.from($el.find('.label'), 0.8, {alpha:'0', scale:'1.4', ease:Power4.easeOut}, '-=0.6');
+            tl.staggerFrom($el.find('.line'), 1.5, {y:'500%', ease:Expo.easeOut}, 0.1, 0.6);
+            tl.staggerFrom($el.find('.categories'), 1.5, {y:'200vh', ease:Expo.easeOut}, 0.15, 0.9);
+            tl.staggerFrom($el.find('.cta--circle'), 1.5, {y:'300%', ease:Expo.easeOut}, 0.15, 0.9);
+            tl.staggerFrom($el.find('#homepage--cover--image'), 1.5, {y:'150%', ease:Expo.easeOut}, 0.15, 0.9);
+            tl.staggerFrom($('.push-article'), 1.5, {y:'300%', ease:Expo.easeOut}, 0.1, 0.9);
+            tl.staggerFrom($('#more_articles').find('.h2'), 1.5, {y:'300%', ease:Expo.easeOut}, 0.1, 0.9);
+            tl.staggerFrom($('#more_articles').find('.cta--circle'), 1.5, {y:'300%', ease:Expo.easeOut}, 0.1, 0.9);
     }
 
     return {
@@ -267,14 +272,12 @@ var archive = (function() {
     }
 
     var top = function(){     
-        var $coverArchive = $('.cover-archive h5'),
-            $sousCat = $('.list-sous-cat'),
-            split = new SplitText($coverArchive,{charsClass: "charsplit", wordsClass: "wordsplit"});
+        var $grid_element = $('.grid__articles'),
+            $sousCat = $('.list-sous-cat')
         var tl = new TimelineLite();
-            tl.staggerFrom($coverArchive.find('.charsplit'), 1.2, {y:'300%', ease:Power4.easeOut}, 0.02, 0.6);
-            tl.from($sousCat, 0.8, {y: '400%', ease:Power2.easeOut}, '-=0.8');
+            tl.staggerFrom($grid_element, 1.5, {y:'20%', ease:Expo.easeOut}, 0.1, 0.6);
     }
-
+/*
     var scrollRevealHandler = function(){
         var $el = $(this);
 
@@ -296,15 +299,15 @@ var archive = (function() {
             tl.staggerFrom($el.find('.post h1'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 0.8);
             tl.staggerFrom($el.find('.post p'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 1.2);
                 }  
-            })*/
+            })
         }
     }
-
+*/
     return {
             init: init
     }
 })();
-
+/*
 var destinations = (function() {
     
     var init = function() {
@@ -342,6 +345,8 @@ var destinations = (function() {
     }
 })();
 
+*/
+
 var allDestinations = (function() {
     
     var init = function() {
@@ -349,16 +354,15 @@ var allDestinations = (function() {
     }
 
     var top = function(){     
-        var $coverDestinations = $('.all-destinations--title h1'),
-            split = new SplitText($coverDestinations,{charsClass: "charsplit", wordsClass: "wordsplit"});
+        var $big_title = $('.big_title');
         var tl = new TimelineLite();
-            tl.staggerFrom($coverDestinations.find('.charsplit'), 1.2, {y:'300%', ease:Power4.easeOut}, 0.02, 0.6);
+            tl.staggerFrom($big_title, 1.5, {y:'250%', ease:Expo.easeOut}, 0.15, 0.6);
     }
     return {
             init: init
     }
 })();
-
+/*
 var single = (function() {
     
     var init = function() {
@@ -431,7 +435,8 @@ var single = (function() {
         }
 })();
 
-
+*/
+/*
 var about = (function() {
     
     var init = function() {
@@ -459,7 +464,7 @@ var about = (function() {
         if ($el.is('.instagram_shots')) {
             tl = new TimelineLite();
             tl.staggerFrom($el.find('li'), 1.8, {y:'250%', ease:Power4.easeOut}, 0.12, 0);
-            /*$('.post').each(function(index, element){
+            $('.post').each(function(index, element){
                 if ($('.post').hasClass('scroll-reveal--revealed'))
                     return false;
                 else{tl = new TimelineLite();
@@ -468,7 +473,7 @@ var about = (function() {
             tl.staggerFrom($el.find('.post h1'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 0.8);
             tl.staggerFrom($el.find('.post p'), 1.8, {y:'200%', ease:Power4.easeOut}, 0.2, 1.2);
                 }  
-            })*/
+            })
         }
     }
 
@@ -477,7 +482,11 @@ var about = (function() {
         init: init
     }
 
-})();
+})
+
+
+();
+*/
 // Launch site
 window.onload = function(){
 
@@ -499,13 +508,23 @@ window.onload = function(){
             homepage.init();
         }, 200);
     };
+
+    if( $('body').hasClass('page--destinations') === true ){
+        setTimeout(function(){
+            allDestinations.init();
+        }, 200);
+    };
+
+
     
-    if( $('body').hasClass('archive') === true ){
+    if( $('body').hasClass('page--archive') === true ){
 
         setTimeout(function(){
             archive.init();
         }, 200);
     };
+
+    /*
 
     if( $('body').hasClass('destinations') === true ){
 
@@ -513,11 +532,7 @@ window.onload = function(){
             destinations.init();
         }, 200);
     };
-    if( $('body').hasClass('all-destinations') === true ){
-        setTimeout(function(){
-            allDestinations.init();
-        }, 200);
-    };
+    
 
     if( $('body').hasClass('page--single') === true ){
         setTimeout(function(){
@@ -531,4 +546,5 @@ window.onload = function(){
             about.init();
         }, 200);
     };
+    */
 }
