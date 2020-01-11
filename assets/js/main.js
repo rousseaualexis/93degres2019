@@ -60,6 +60,7 @@ var site = (function() {
             $(".mask").remove();
         }});
         tl.staggerFrom($('header'), 1.5 , {y:'200%', ease:Expo.easeOut}, 0, 1);
+        tl.staggerFrom($('.container'), 1.5 , {y:'10%', ease:Expo.easeOut}, 0, 0.8);
 
         setTimeout(function(){
             init();
