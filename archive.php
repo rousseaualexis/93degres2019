@@ -108,7 +108,8 @@ $cat_id = get_queried_object_id()
 !-->
 
 
-<<div class="col-xs-24 col-xs-push-1">
+<div class="col-xs-24 col-xs-push-1">
+           <div class="row">
     <?php 
         if (isset($_GET['type'])){
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -133,9 +134,38 @@ $cat_id = get_queried_object_id()
                     <p>
                         <?php _e( 'Sorry, no posts matched your criteria.' ); ?>
                     </p>
+
+
                 <?php endif;}
+                else {
+
+
 ?>
-                                             
+     
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $title = get_the_archive_title();
+        $args = array(
+            'post_type' => array('articles'), 
+            'cat' => $cat_id,
+            'posts_per_page' => 9, 
+            'paged' => $paged );
+        $wp_query = new WP_Query($args);
+        $i = 1;
+
+        while ( have_posts() ) : the_post();
+
+            get_template_part('assets/views/content-grid');
+
+        if ( $i % 3 === 0 ) { echo '</div><div class="row">'; }
+        $i++; endwhile; wp_reset_query();
+        //get_template_part('assets/views/content-pagination');
+        ?>  
+
+
+<?php } ?>    
+
+</div>
+</div>                                
                                                                     
 </div>
 
