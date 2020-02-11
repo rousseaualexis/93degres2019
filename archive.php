@@ -15,7 +15,7 @@ $cat_id = get_queried_object_id()
         $thumbnail_url = $thumbnail['sizes']['large'];
         $term_url = get_term_link($term);
         $term_name = $term->name;
-        $categories = get_the_category();
+        $categories = get_the_tags();
         $category_id = $categories[0]->cat_ID;
     ?>
 
@@ -39,13 +39,13 @@ $cat_id = get_queried_object_id()
                 $taxonomy = 'post_tag';
                 $args = array(
                     'taxonomy' => $taxonomy,
-                    'post_type' => $post_type
+                    'post_type' => $post_type,
+                    'hide_empty' => false
                 );
                 $categories = get_categories($args);
                 foreach( $categories as $category ) {
                     $category_link = sprintf( 
-                        '<a href="%1$s?type=articles" alt="%2$s">%3$s<span>(%4$s)</span></a>',
-                        esc_url( get_category_link( $category->term_id ) ),
+                        '<a href="?type=%2$s" alt="%1$s">%2$s<span>(%3$s)</span></a>',
                         esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
                         esc_html( $category->name ),
                         esc_html( $category->category_count )
@@ -82,7 +82,7 @@ $cat_id = get_queried_object_id()
 
 
 <div class="row content">
-    <div class="col-xs-24 col-xs-push-1">
+  <!--  <div class="col-xs-24 col-xs-push-1">
             <div class="row">
     <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $title = get_the_archive_title();
@@ -104,6 +104,41 @@ $cat_id = get_queried_object_id()
         ?>  
     </div>  
 </div>
+
+!-->
+
+
+<<div class="col-xs-24 col-xs-push-1">
+    <?php 
+        if (isset($_GET['type'])){
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $title = get_the_archive_title();
+            $args = array(
+                'post_type' => array('articles'), 
+            'cat' => $cat_id,
+            'posts_per_page' => 9, 
+            'paged' => $paged,
+            'tag'=> array($_GET['type']),
+                          'category_name' => $title);
+            $wp_query = new WP_Query($args);
+                if ( have_posts() ) :
+            
+                    while ( have_posts() ) : the_post();
+                        get_template_part( 'assets/views/content-grid' );
+                    endwhile;
+                        //<!-- pagination here -->
+                    get_template_part('assets/views/content-pagination');
+                    wp_reset_postdata();
+                else : ?>
+                    <p>
+                        <?php _e( 'Sorry, no posts matched your criteria.' ); ?>
+                    </p>
+                <?php endif;}
+?>
+                                             
+                                                                    
+</div>
+
 </div>
 <?php get_footer(); ?>
 <?php include'end.php' ?>
