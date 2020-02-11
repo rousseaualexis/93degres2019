@@ -23,6 +23,7 @@
 
 
 	.h1
+		padding-top: 1vw
 		margin-bottom: $desktop-margin
 		z-index: 1
 		pointer-events: none
@@ -232,6 +233,8 @@
 
 			.homepage--destinations--image
 		        opacity: 1
+		        transform: none
+		        transform-origin: right
 
 	&--image
 
@@ -242,6 +245,10 @@
 		background-repeat: no-repeat
 		background-position: center
 		opacity: 0
+		
+		transition: all $transition-scroll
+		transform: scaleX(0.75)
+		transform-origin: left
 
 		+media-sm-and-less
 			opacity: 1

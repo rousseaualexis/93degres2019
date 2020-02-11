@@ -7,14 +7,16 @@
 <div class="container">
 <?php
 $term = get_queried_object();
+$cat_id = get_queried_object_id()
 ?>
    
     <?php
         $thumbnail = get_field('thumbnail', $term);
         $thumbnail_url = $thumbnail['sizes']['large'];
-        $destination_code = get_field('destination_code', $term);
         $term_url = get_term_link($term);
         $term_name = $term->name;
+        $categories = get_the_category();
+        $category_id = $categories[0]->cat_ID;
     ?>
 
 
@@ -26,7 +28,7 @@ $term = get_queried_object();
     <div class="col-xs-20 col-xs-offset-2">
         <span class="h1"><?php echo the_archive_title(); ?></span>
         <div class="page--archive__all-destinations">
-            <a href="">Toutes les destinations </a>
+            <a href="">Toutes les destinat </a>
         </div>
     </div>
 
@@ -84,10 +86,16 @@ $term = get_queried_object();
             <div class="row">
     <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $title = get_the_archive_title();
-        $args = array('post_type' => array('articles'), 'tag' => $term_name, 'posts_per_page' => 9, 'paged' => $paged );
+        $args = array(
+            'post_type' => array('articles'), 
+            'cat' => $cat_id,
+            'posts_per_page' => 9, 
+            'paged' => $paged );
         $wp_query = new WP_Query($args);
         $i = 1;
+
         while ( have_posts() ) : the_post();
+
             get_template_part('assets/views/content-grid');
 
         if ( $i % 3 === 0 ) { echo '</div><div class="row">'; }
