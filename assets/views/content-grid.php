@@ -16,6 +16,7 @@
             ?>  
             <a href="<?php the_permalink(); ?>">
                 <div class="item__img-wrap">
+                <div class="follower"></div>
                 <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                 </div></div>
                             

@@ -48,10 +48,15 @@ Template Name: Homepage
                 <div class="cta--circle col-xs-offset-2">
                     <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
                 </div>
+
+
                 <a id="homepage--cover--image" class="item col-xs-24 col-sm-16" href="<?php the_permalink(); ?>">
+                            
                             <div class="item__img-wrap image--21-9">
-                            <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
-                            </div></div>
+                                <div class="follower"></div>
+                                <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
+                                </div>
+                            </div>
                 </a>
                 <div id="h1--seo" class="h5"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
             </div>

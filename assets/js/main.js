@@ -131,6 +131,8 @@ var site = (function() {
   var allModules = function() {
 
         scrollReveal();
+    
+
     }
 
 
@@ -163,6 +165,13 @@ var site = (function() {
         })
     }
  */
+
+    var cursor = function() {
+            
+
+    }
+
+
     var scrollReveal = function() {
         //get viewport size
         var windowHeight = $(window).innerHeight(),

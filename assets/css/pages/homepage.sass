@@ -58,10 +58,6 @@
 		padding-right: 0
 		margin-top: $desktop-margin* -3
 
-		&:hover
-			.item__img
-				opacity: 0.25
-
 		+media-sm-and-less
 	
 
@@ -70,8 +66,6 @@
 			right: 0
 			top: 0
 
-		.item__img
-			transition: opacity $transition-quick
 
 		.image--21-9
 			+media-sm-and-less
@@ -116,13 +110,10 @@
 			margin-bottom: $mobile-margin * 2
 
 		.item__img
-			transition: opacity $transition-quick
 		a
 
 			display: block
-			&:hover
-				.item__img
-					opacity: 0.25
+
 
 		.categories
 			margin-top: $desktop-margin
@@ -234,7 +225,8 @@
 			.homepage--destinations--image
 		        opacity: 1
 		        transform: none
-		        transform-origin: right
+		        transform-origin: left
+		        transition: transform $transition-quick, opacity $transition-quick
 
 	&--image
 
@@ -246,9 +238,9 @@
 		background-position: center
 		opacity: 0
 		
-		transition: all $transition-scroll
-		transform: scaleX(0.75)
-		transform-origin: left
+		transition: transform $transition-scroll, opacity $transition-quick
+		transform: scaleY(0.25)
+		transform-origin: right
 
 		+media-sm-and-less
 			opacity: 1
