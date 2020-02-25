@@ -1,4 +1,52 @@
+.mouse-cursor 
+	display: block
+	z-index: 10000
+	width: 300px
+	height: 300px
+	position: fixed
+	pointer-events: none
+	opacity: 1
+	transform: translate3d(-50%, -50%, 0)
+	transition: opacity .5s ease
+	top: calc(50vh - 150px)
+	right: calc(50vw - 150px)
+	
+	.mousecontainer
+		width: 300px
+		height: 300px
+		//transform: translate3d(-50%, -50%, 0) scale3d(0.5, 0.5, 1)
+		position: absolute
+		
+		z-index: -1
+		border-radius: 50%
+		transform: scale(0)
+	
+		transition: $transition-quick
+		top: 0px
+		right: 0px
 
+		div
+
+			top: 25%
+			left: 25%
+			position: absolute
+			//opacity: 0
+			
+
+
+			&:after
+				
+				color: #ffffff
+				width: 100%
+				height: 100%
+				z-index: 100
+				line-height: 0
+				top: 50%
+
+.mouse-cursor.hovert .mousecontainer
+
+	transform: scale(1)
+.mouse-cursor.wink #mousecontainer-plus
 
 
 div
@@ -286,26 +334,10 @@ li
 
 
 .follower
-	width: 150px
-	height: 150px
-	border-radius: 100%
-	display: flex
-	overflow: hidden
-	background: $color-93degres
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -75px
-	margin-left: -75px
-	pointer-events: none
-	z-index: 10000
-	opacity: 0
-	transform: scale(0)
-	text-align: center
-	transition: $transition-quick
+	
 	&:after
-		content: '+'
-		font-size: 50px
+		content: 'Voir'
+		font-size: 15px
 		line-height: 145px
 		position: absolute
 		text-align: center

@@ -508,7 +508,7 @@ window.onload = function(){
         if (isMobile) {
             //Do nothing
         } else {
-            //SmoothScroll();
+            SmoothScroll();
         };
   
     

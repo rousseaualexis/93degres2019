@@ -1,4 +1,10 @@
- 
+
+<div class="mouse-cursor" id="mouse">
+        <div id="mousecontainer-plus" class="mousecontainer"><div class="cta--circle">
+                        <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
+                    </div></div>
+    </div> 
+
 
 <div id="footer" class="content row">
     <div id="list-destinations" class="col-xs-24">
@@ -72,11 +78,11 @@
 	<script src="<?php bloginfo('template_url') ?>/assets/js/lining.js" type="text/javascript"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url') ?>/assets/js/flickity.js" type="text/javascript"></script>
-    <script src="<?php bloginfo('template_url') ?>/assets/js/smoothscroll.js"></script>
-    
-<script src="<?php bloginfo('template_url') ?>/assets/js/main.js"></script>
+   
+    <script src="<?php bloginfo('template_url') ?>/assets/js/main.js"></script>
     <script src="<?php bloginfo('template_url') ?>/assets/js/cursor.js"></script>
 <!--
+      <script src="<?php bloginfo('template_url') ?>/assets/js/smoothscroll.js"></script>
     <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/tiny-slider.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/jquery.nicescroll.min.js"></script>

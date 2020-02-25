@@ -7,7 +7,7 @@ Template Name: Homepage
 <body class="page--homepage">
 <main> 
 <?php get_header(); ?>
-<div data-scroll>
+<div data-scroll id="luxy">
 
 <div class="container">
     <?php
@@ -52,8 +52,7 @@ Template Name: Homepage
 
                 <a id="homepage--cover--image" class="item col-xs-24 col-sm-16" href="<?php the_permalink(); ?>">
                             
-                            <div class="item__img-wrap image--21-9">
-                                <div class="follower"></div>
+                            <div class="item__img-wrap image--21-9" data-mouse="plus">
                                 <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                                 </div>
                             </div>
@@ -73,8 +72,8 @@ Template Name: Homepage
 
             <div id="more_articles" class="row">
                 <div class="col-xs-22 col-xs-offset-1">
-                    <span class="h2">Envie de voir plus d’articles ?</span>
-                    <div class="cta--circle">
+                    <span class="h2" >Envie de voir plus d’articles ?</span>
+                    <div class="cta--circle" data-mouse="plus">
                         <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
                     </div>
                 </div>

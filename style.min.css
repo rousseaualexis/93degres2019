@@ -146,6 +146,11 @@ table{border-collapse:collapse;border-spacing:0}
 .bootstrap--grid{height:1000000vh;position:fixed;top:0;z-index:-100}
 .bootstrap--grid .col-xs-1{height:10000vh}
 .bootstrap--grid .col-xs-1 div{position:relative;float:left;width:100%;height:100%;border-right:1px solid red;border-left:1px solid red;opacity:1;padding-top:15px;padding-bottom:15px;border:1px solid #ddd;border:1px solid darkgreen}
+.mouse-cursor{display:block;z-index:10000;width:300px;height:300px;position:fixed;pointer-events:none;opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0);-webkit-transition:opacity .5s ease;transition:opacity .5s ease;top:calc(50vh - 150px);right:calc(50vw - 150px)}
+.mouse-cursor .mousecontainer{width:300px;height:300px;position:absolute;z-index:-1;border-radius:50%;-webkit-transform:scale(0);transform:scale(0);-webkit-transition:.45s cubic-bezier(0.4,0,0,1);transition:.45s cubic-bezier(0.4,0,0,1);top:0;right:0}
+.mouse-cursor .mousecontainer div{top:25%;left:25%;position:absolute}
+.mouse-cursor .mousecontainer div:after{color:#fff;width:100%;height:100%;z-index:100;line-height:0;top:50%}
+.mouse-cursor.hovert .mousecontainer{-webkit-transform:scale(1);transform:scale(1)}
 div[data-scroll]{top:0}
 *::-moz-selection{background-color:rgba(0,0,0,0.05)}
 *::selection{background-color:rgba(0,0,0,0.05)}
@@ -184,8 +189,7 @@ li{display:inline-block}
 .overflow{overflow:hidden}
 .caption{margin-top:5px;float:left}
 .image{background-size:cover;background-position:center}
-.follower{width:150px;height:150px;border-radius:100%;display:-webkit-box;display:-ms-flexbox;display:flex;overflow:hidden;background:#ffbc00;position:absolute;left:50%;top:50%;margin-top:-75px;margin-left:-75px;pointer-events:none;z-index:10000;opacity:0;-webkit-transform:scale(0);transform:scale(0);text-align:center;-webkit-transition:.45s cubic-bezier(0.4,0,0,1);transition:.45s cubic-bezier(0.4,0,0,1)}
-.follower:after{content:'+';font-size:50px;line-height:145px;position:absolute;text-align:center;width:100%;height:100%;color:#fff}
+.follower:after{content:'Voir';font-size:15px;line-height:145px;position:absolute;text-align:center;width:100%;height:100%;color:#fff}
 .zoom_img{width:100%;height:100%;position:absolute;-webkit-transform:scale(1.1);transform:scale(1.1);-webkit-transition:2s cubic-bezier(0,0,0,1);transition:2s cubic-bezier(0,0,0,1)}
 .item__img-wrap{overflow:hidden;max-width:100%;padding-bottom:100%;will-change:transform;background:#121317}
 .item__img-wrap:hover .zoom_img{-webkit-transform:scale(1);transform:scale(1);-webkit-transition:2s cubic-bezier(0,0,0,1);transition:2s cubic-bezier(0,0,0,1)}

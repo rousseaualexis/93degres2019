@@ -14,7 +14,7 @@
                     }}
             ?>  
             <a href="<?php the_permalink(); ?>" class="hidden">
-                <div class="item__img-wrap image--3-2">
+                <div class="item__img-wrap image--3-2" data-mouse="plus">
                 <div class="follower"></div>
                 <div class="zoom_img"><div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                 </div></div></div>

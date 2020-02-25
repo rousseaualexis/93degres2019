@@ -1,5 +1,4 @@
 <div class="mask"></div>
-<div id="follower"></div>
     <header class="row">
         <div class="col-md-8 col-md-offset-2">
             <?php 
@@ -13,7 +12,8 @@
             'echo'        => true,
             'show_home'   => false,
             'link_before' => '',
-            'link_after'  => ''
+            'link_after'  => '',
+            'data-mouse'  => none
             );
             wp_nav_menu( $args ); ?>
 
