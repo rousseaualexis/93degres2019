@@ -1,7 +1,7 @@
 
 <div class="mouse-cursor" id="mouse">
         <div id="mousecontainer-plus" class="mousecontainer"><div class="cta--circle">
-                        <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
+                        <a class="" href="#"><span>Discover</span><div class="circle"></div></a>
                     </div></div>
     </div> 
 

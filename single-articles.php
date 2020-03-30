@@ -22,8 +22,14 @@
 ?>
 
   <div id="single--introduction" class="content row">
-      <div class="categories col-xs-offset-2"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
-      <h1 class="h1 col-xs-20 col-xs-offset-2" data-lining><?php the_title(); ?></h1>
+      <div class="categories"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
+      <h1 class="h1 col-xs-20 col-xs-offset-2" data-lining>
+        <?php 
+
+
+            $title = get_the_title();
+            $title = strip_tags( $title, '<strong>' ); //ADD - strip tags before sending to template
+            echo $title; ?></h1>
       <div id="single--introduction__thumbnail" class="item col-xs-24">
           <div class="item__img-wrap image--21-9">
               <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">

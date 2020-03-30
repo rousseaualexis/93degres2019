@@ -22,7 +22,7 @@ Template Name: Homepage
             $count++;
             if($count == 1) :
     ?>
-            <div id="homepage--cover" class="content row">
+            <div id="homepage--cover" class="content row" >
 
 
 
@@ -37,28 +37,28 @@ Template Name: Homepage
                     }
                 ?>
                 
-                <div class="h1 col-xs-offset-2 col-xs-20" data-lining><?php the_title(); ?></div>
+                <a href="<?php the_permalink(); ?>" data-mouse="plus" data-lining><div class="h1 col-xs-offset-2 col-xs-20" >
+                        <?php the_title(); ?></div></a>
                 <?php 
                     $thumbnail = get_field( 'thumbnail' );
                     $thumbnail_url = $thumbnail['sizes']['large'];
                 ?>
               
                 
-                <div class="categories col-xs-offset-2"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/ ><span><?php echo $term_name; ?> — <?php the_time('d.m.Y'); ?></span></div>
-                <div class="cta--circle col-xs-offset-2">
-                    <a class="" href="<?php the_permalink(); ?>"><span>Découvrir</span><div class="circle"></div></a>
-                </div>
+             
 
 
-                <a id="homepage--cover--image" class="item col-xs-24 col-sm-16" href="<?php the_permalink(); ?>">
+                <a id="homepage--cover--image" class="item col-xs-24 col-sm-17" href="<?php the_permalink(); ?>" data-mouse="plus">
                             
-                            <div class="item__img-wrap image--21-9" data-mouse="plus">
+                            <div class="item__img-wrap image--3-2" >
                                 <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">
                                 </div>
                             </div>
                 </a>
-                <div id="h1--seo" class="h5"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
+                   <div class="categories"><img src="<?php echo $flag_url;?>" alt="<?php echo $flag['alt'];?>"/><span><?php echo $term_name; ?> — <?php the_time('Y'); ?></span></div>
+                
             </div>
+            <div id="h1--seo" class="h5"><h1>93 Degrés, blog de voyage, aventure et photographie</h1></div>
 
             <div id="other_articles" class="content row scroll-reveal">
     <?php
@@ -70,14 +70,7 @@ Template Name: Homepage
     ?>
             </div>
 
-            <div id="more_articles" class="row">
-                <div class="col-xs-22 col-xs-offset-1">
-                    <span class="h2" >Envie de voir plus d’articles ?</span>
-                    <div class="cta--circle" data-mouse="plus">
-                        <a class="" href="#"><span>Voir plus</span><div class="circle"></div></a>
-                    </div>
-                </div>
-            </div>
+    
 
 
             <div class="row homepage--destinations">

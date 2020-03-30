@@ -649,6 +649,21 @@ function misha_allowed_block_types( $allowed_blocks ) {
 }
 */
 
+
+add_filter('widget_title', 'do_shortcode');
+
+add_shortcode('br', 'ng_shortcode_breaktag');
+function ng_shortcode_break( $attr ){
+  return '<br />';
+}
+add_filter('widget_title', 'do_shortcode');
+
+
+add_shortcode('span', 'ng_shortcode_spantag');
+function ng_shortcode_spantag( $attr, $content ){
+return '<span>'. $content . '</span>';
+}
+
 add_action('acf/init', 'my_acf_init');
 function my_acf_init() {
   

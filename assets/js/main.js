@@ -259,7 +259,7 @@ var homepage = (function() {
             $text = $("#homepage--cover .h1"),
             $line = $("#homepage--cover .h1 .line");
         var tl = new TimelineLite();
-
+            $('br').remove();
             tl.staggerFrom($el.find('.line'), 1.5, {y:'500%', ease:Expo.easeOut}, 0.1, 0.6);
             tl.staggerFrom($el.find('.categories'), 1.5, {y:'200vh', ease:Expo.easeOut}, 0.15, 0.9);
             tl.staggerFrom($el.find('.cta--circle'), 1.5, {y:'300%', ease:Expo.easeOut}, 0.15, 0.9);
