@@ -1,5 +1,5 @@
 <div class="mask"></div>
-    <header class="row">
+    <header id="header" class="row">
         <div class="col-md-8 col-md-offset-2">
             <?php 
             $args = array(
@@ -13,7 +13,7 @@
             'show_home'   => false,
             'link_before' => '',
             'link_after'  => '',
-            'data-mouse'  => none
+            'data-mouse'  => 'size'
             );
             wp_nav_menu( $args ); ?>
 

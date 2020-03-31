@@ -649,19 +649,20 @@ function misha_allowed_block_types( $allowed_blocks ) {
 }
 */
 
+add_filter( 'walker_nav_menu_start_el', 'modify_walker_data_attr', 10, 4);
 
-add_filter('widget_title', 'do_shortcode');
+function modify_walker_data_attr( $item_output, $item, $depth, $args )
+{
 
-add_shortcode('br', 'ng_shortcode_breaktag');
-function ng_shortcode_break( $attr ){
-  return '<br />';
-}
-add_filter('widget_title', 'do_shortcode');
+    // I use ACF for adding field to a menu item
+    // https://www.advancedcustomfields.com/resources/adding-fields-menu-items/
 
 
-add_shortcode('span', 'ng_shortcode_spantag');
-function ng_shortcode_spantag( $attr, $content ){
-return '<span>'. $content . '</span>';
+    $old = '<a';
+    $new = '<a data-mouse="size" ';
+    $item_output = str_replace($old, $new, $item_output);
+
+    return $item_output;
 }
 
 add_action('acf/init', 'my_acf_init');

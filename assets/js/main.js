@@ -55,11 +55,26 @@ var site = (function() {
 
         var tl = new TimelineLite();
 
-        tl.staggerTo($(".mask"), 1, {y:"-100%", ease:Expo.easeOut, delay:0.75, onComplete:function(){
         
-            $(".mask").remove();
+
+        //ANIMATION ONLY ONCE PER SESSION
+        if (sessionStorage.viewWebsite) {
+            sessionStorage.viewWebsite = Number(sessionStorage.viewWebsite) + 1;
+            tl.staggerTo($(".mask"), 1, {y:"-100%", ease:Expo.easeOut, delay:0.75, onComplete:function(){
+      
         }});
-        tl.staggerFrom($('header'), 1.5 , {y:'200%', ease:Expo.easeOut}, 0, 1);
+        } 
+        else {
+            $(".mask").remove();
+            document.getElementById("header").style.zIndex = 100
+            tl.staggerFrom($('header'), 1.5 , {y:'200%', ease:Expo.easeOut}, 0, 0.5);
+            tl.staggerFrom($('header'), 1.5 , {opacity:'0', ease:Expo.easeOut}, 0, 0.5);
+
+            sessionStorage.viewWebsite = 1;
+        }
+
+
+        //tl.staggerFrom($('header'), 1.5 , {y:'200%', ease:Expo.easeOut}, 0, 1);
         tl.staggerFrom($('.container'), 1.5 , {y:'10%', ease:Expo.easeOut}, 0, 0.8);
 
         setTimeout(function(){
@@ -98,7 +113,7 @@ var site = (function() {
                     }}, 0, 0.2);
 
                     tl.staggerTo($('.container'), 2, {y:'-5%', ease:Expo.easeOut}, 0, 0.2);
-                    tl.staggerTo($('header'), 3, {y:'-400%', ease:Expo.easeOut}, 0, 0.2); 
+                    //tl.staggerTo($('header'), 3, {y:'-400%', ease:Expo.easeOut}, 0, 0.2); 
             }
         });
             $("#mobile-menu").on('click', function() {

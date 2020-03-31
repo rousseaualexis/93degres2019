@@ -37,7 +37,7 @@ Template Name: Homepage
                     }
                 ?>
                 
-                <a href="<?php the_permalink(); ?>" data-mouse="plus" data-lining><div class="h1 col-xs-offset-2 col-xs-20" >
+                <a href="<?php the_permalink(); ?>" data-mouse="discover" data-lining><div class="h1 col-xs-offset-2 col-xs-20" >
                         <?php the_title(); ?></div></a>
                 <?php 
                     $thumbnail = get_field( 'thumbnail' );
@@ -48,7 +48,7 @@ Template Name: Homepage
              
 
 
-                <a id="homepage--cover--image" class="item col-xs-24 col-sm-17" href="<?php the_permalink(); ?>" data-mouse="plus">
+                <a id="homepage--cover--image" class="item col-xs-24 col-sm-17" href="<?php the_permalink(); ?>" data-mouse="discover">
                             
                             <div class="item__img-wrap image--3-2" >
                                 <div class="item__img" style="background-image: url('<?php echo $thumbnail_url;?>');" title="<?php echo $thumbnail['alt']; ?>">

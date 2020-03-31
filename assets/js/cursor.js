@@ -19,34 +19,18 @@ for (var me=0; me < mouses.length; me++) {
     mouses.item(me).onmouseover = function(){
         mouse.classList.add("hovert");
         
-        if ( this.dataset.mouse === 'plus' ){
-            mouse.classList.add("plus");
+        if ( this.dataset.mouse === 'size' ){
+            mouse.classList.add("mouse--size");
+            mouse.classList.remove("mouse--discover");
             //lottie.play("Mouse wink");
         }
         
-        else if ( this.dataset.mouse === 'heart' ){
-            mouse.classList.add("heart");
-            mouse.classList.remove("inload", "wink", "laugh", "pointer", "grabber");
+        else if ( this.dataset.mouse === 'discover' ){
+            mouse.classList.add("mouse--discover");
+            mouse.classList.remove("mouse--size");
             //lottie.play("Mouse heart");
         }
-        
-        else if ( this.dataset.mouse === 'laugh' ){
-            mouse.classList.add("laugh");
-            mouse.classList.remove("inload", "wink", "heart", "pointer", "grabber");
-            //lottie.play("Mouse laugh");
-        }
-        
-        else if ( this.dataset.mouse === 'pointer' ){
-            mouse.classList.add("pointer");
-            mouse.classList.remove("inload", "wink", "heart", "laugh", "grabber");
-           // lottie.play("Mouse pointer");
-        }
-        
-        else if ( this.dataset.mouse === 'grabber' ){
-            mouse.classList.add("grabber");
-            mouse.classList.remove("inload", "wink", "heart", "laugh", "pointer");
 
-        }
     }
     
     mouses.item(me).onmouseout = function(){
@@ -56,9 +40,12 @@ for (var me=0; me < mouses.length; me++) {
 }
 
 function followCursor(event){
-    mouse.style.left        = event.clientX+'px';
-    mouse.style.top         = event.clientY+'px';
-    
+
+    var curX = event.clientX;
+    var curY = event.clientY;
+
+    mouse.style.transform = "translate(calc(" + curX + "px - 50vw),calc(" + curY + "px - 50vh))";
+
     if (mouseLoad === 0){
         mouse.classList.add("inload");
         mouseLoad = 1;

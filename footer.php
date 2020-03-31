@@ -1,8 +1,19 @@
 
 <div class="mouse-cursor" id="mouse">
-        <div id="mousecontainer-plus" class="mousecontainer"><div class="cta--circle">
-                        <a class="" href="#"><span>Discover</span><div class="circle"></div></a>
-                    </div></div>
+        <div class="base--circle"></div>
+        <div  id="mousecontainer-discover" class="mousecontainer">
+            <div class="cta--circle">
+                <div class="background--circle"><span>Discover</span><div class="circle"></div></div>
+            </div>
+        </div>
+
+            
+
+        <div id="mousecontainer-size"  class="mousecontainer">
+           <div class="cta--circle">
+                <div class="background--circle"><span>Discover</span><div class="circle"></div></div>
+            </div>
+        </div>
     </div> 
 
 
@@ -73,6 +84,7 @@
 
 
 	<script src="<?php bloginfo('template_url') ?>/assets/js/jquery.js"></script>
+    <script src="<?php bloginfo('template_url') ?>/assets/js/cursor.js"></script>
     <script src="<?php bloginfo('template_url') ?>/assets/js/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 	<script src="<?php bloginfo('template_url') ?>/assets/js/lining.js" type="text/javascript"></script>
@@ -80,7 +92,6 @@
     <script src="<?php bloginfo('template_url') ?>/assets/js/flickity.js" type="text/javascript"></script>
    
     <script src="<?php bloginfo('template_url') ?>/assets/js/main.js"></script>
-    <script src="<?php bloginfo('template_url') ?>/assets/js/cursor.js"></script>
 <!--
       <script src="<?php bloginfo('template_url') ?>/assets/js/smoothscroll.js"></script>
     <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
